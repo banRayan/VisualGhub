@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    background-color: #D5DAE6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    background-color: white;
+    width: 500px;
+    min-height: 300px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.041);
+
+    font: 400 1rem Arial, Helvetica, sans-serif;
+
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+
+}

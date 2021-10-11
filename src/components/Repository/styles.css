@@ -1,0 +1,8 @@
+.repository-container{
+    color: rgba(102, 102, 102, 0.568);
+    border: 1px solid rgba(102, 102, 102, 0.568);
+    border-radius: 5px;
+    font: 600 1rem Arial;
+    padding: 1rem ;
+    margin: 15px 0 ;
+}
