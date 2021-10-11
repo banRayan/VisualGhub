@@ -1,8 +1,31 @@
 .repository-container{
-    color: rgba(102, 102, 102, 0.568);
-    border: 1px solid rgba(102, 102, 102, 0.568);
+    color: gray;
+    /* border: 1px solid black; */
+    font: 700 1.2rem Arial;
+    margin-bottom: 2rem;
+}
+
+.repository-container:last-child{
+    margin-bottom: 0;
+}
+
+.status-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.repository-status{
+    padding: 5px 10px;
+    background-color: #2C974B;
     border-radius: 5px;
-    font: 600 1rem Arial;
-    padding: 1rem ;
-    margin: 15px 0 ;
+    color: white;
+    font: 700 .7rem Arial;
+    text-align: center;
+
+}
+.techs{
+    color: #666;
+    font: 400 .8rem Arial;
+    margin-top: .3rem;
 }

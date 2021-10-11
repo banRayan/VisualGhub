@@ -18,7 +18,6 @@ const Home = () =>{
     return (
         <main>
             <section className="container">
-                <h1>Repositories List</h1>
                 <Repositories repositories={repositories}/>
             </section>
         </main>
