@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import './styles.css'
 import Repositories from '../../components/Repositories';
+import Header from '../../components/Header';
 
 const Home = () =>{
     const [repositories, setRepositories] = useState([]);
@@ -16,8 +17,11 @@ const Home = () =>{
     }, [])
 
     return (
-        <main>
-            <section className="container">
+        <main className="home-container">
+            <section className="left-section">
+                <Header />  
+            </section>
+            <section className="main-section">
                 <Repositories repositories={repositories}/>
             </section>
         </main>
