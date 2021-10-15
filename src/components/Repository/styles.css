@@ -1,13 +1,14 @@
 .repository-container{
-
     color: #24292F;
-    /* border: 1px solid black; */
     font: 700 1.2rem 'Poppins', Arial, Helvetica, sans-serif;
-    margin-bottom: 2rem;
-}
+    text-decoration: none;
 
-.repository-container:last-child{
-    margin-bottom: 0;
+    padding: 1.2rem 2rem;
+    border: none;
+    background-color: white;
+    text-align: left;
+    cursor: pointer;
+    transition: .3s;
 }
 
 .status-container{
@@ -17,6 +18,10 @@
     justify-content: space-between;
 }
 
+.repository-container:hover{
+    font: 700 1.3rem 'Poppins', Arial, Helvetica, sans-serif;
+
+}
 .repository-status{
     padding: 5px 10px;
     background-color: #2C974B;
@@ -29,6 +34,6 @@
 
 .techs{
     color: rgba(102, 102, 102, 0.637);
-    font: 700 .8rem 'Poppins', Arial, Helvetica, sans-serif;
+    font: 500 .9rem 'Poppins', Arial, Helvetica, sans-serif;
     margin-top: .3rem;
 }

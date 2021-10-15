@@ -8,14 +8,19 @@ const Repository = ({repo}) => {
         return !status ? 'Public' : 'Private'
     }
 
+    const getUrlRepository = () => {
+        const url = repo.url;
+        console.log(url)
+    }
+
     return ( 
-        <div className="repository-container">
+        <button onClick={getUrlRepository} className="repository-container">
             <div className="status-container">
                 {repo.name}
                 <div className="repository-status">{getRepositoryStatus()}</div>
             </div>
             <div className="techs">{repo.language}</div>
-        </div>
+        </button>
     );
 }
 

@@ -1,18 +1,16 @@
 .header-container{
-    height: 100%;
     background-color: white;
+    width: 60px;
     border-radius: 10px;
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.041);
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 2rem;
 }
 
 .icon-container{
     font: 900 1rem 'Poppins', Arial, Helvetica, sans-serif;
-
     color: #24292F;
     padding: .5rem 1rem;
    

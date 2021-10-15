@@ -1,13 +1,23 @@
 .container{
-    width: 450px;
-    min-height: 300px;
+    width: 500px;
+    height: 650px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.041);
 
     font: 400 1rem Arial, Helvetica, sans-serif;
-
-    padding: 2rem;
+    margin: 0 2rem;
     display: flex;
     flex-direction: column;
+
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar{
+    background-color: white;
+    border-radius: 0 10px 10px 0;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
 }

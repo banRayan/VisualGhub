@@ -19,12 +19,12 @@
 
 .left-section{
     grid-area: left-section;
+
+    margin: 0 auto;
 }
 
 .main-section{
-    grid-area: main-section;
-
-    
+    grid-area: main-section;    
 }
 
 
