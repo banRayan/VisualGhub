@@ -16,13 +16,32 @@ const Home = () =>{
         fetchData();
     }, [])
 
+    const handleClickRepository = (id) => {
+        const thisRepository = repositories.filter(repo => {
+            return repo.id === id;
+        })
+
+        const newRepository = thisRepository[0];
+        
+        const infoRepository = document.querySelector('.info-repository');
+        const informations = document.createElement('div');
+        informations.innerHTML = 
+        `
+        <h1>${newRepository.name}</h1>
+        <p>${newRepository.description}</p>
+        `;
+
+        infoRepository.appendChild(informations);
+    }
+
     return (
         <main className="home-container">
             <section className="left-section">
                 <Header />  
             </section>
             <section className="main-section">
-                <Repositories repositories={repositories}/>
+                <Repositories repositories={repositories} handleClickRepository={handleClickRepository}/>
+                <div className="info-repository"></div>
             </section>
         </main>
     )

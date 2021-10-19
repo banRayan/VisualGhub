@@ -24,8 +24,15 @@
 }
 
 .main-section{
-    grid-area: main-section;    
+    grid-area: main-section; 
+    
+    display: flex;
+    flex-direction: row;
 }
 
+.info-repository{
+    color: white;
+    font: 400 1rem 'Poppins', Arial, Helvetica, sans-serif;
+}
 
 

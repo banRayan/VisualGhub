@@ -3,12 +3,12 @@ import React from 'react';
 import './styles.css'
 
 import Repository from '../Repository';
-const Repositories = ({repositories}) =>{
+const Repositories = ({repositories, handleClickRepository}) =>{
     return (
         <>
                 <div className="container">
                     {
-                        repositories.map(repo => (<Repository repo={repo}/>))
+                        repositories.map(repo => (<Repository key={repositories.id} repo={repo} handleClickRepository={handleClickRepository}/>))
                     }
                 </div>
         </>
