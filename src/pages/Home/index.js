@@ -16,19 +16,24 @@ const Home = () =>{
         fetchData();
     }, [])
 
-    const handleClickRepository = (id) => {
+    const handleClickRepository = (id) => {  
         const thisRepository = repositories.filter(repo => {
             return repo.id === id;
         })
-
-        const newRepository = thisRepository[0];
         
+        const newRepository = thisRepository[0];        
+        addInfoReporitory(newRepository);
+    }
+
+    const addInfoReporitory = (newRepo) => {
         const infoRepository = document.querySelector('.info-repository');
         const informations = document.createElement('div');
+        informations.setAttribute('class','informations');
+       
         informations.innerHTML = 
         `
-        <h1>${newRepository.name}</h1>
-        <p>${newRepository.description}</p>
+        <h1>${newRepo.name}</h1>
+        <p>${newRepo.description}</p>
         `;
 
         infoRepository.appendChild(informations);
