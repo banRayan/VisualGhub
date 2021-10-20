@@ -17,16 +17,17 @@ const Home = () =>{
     }, [])
 
     const handleClickRepository = (id) => {  
+        const infoRepository = document.querySelector('.info-repository');
         const thisRepository = repositories.filter(repo => {
             return repo.id === id;
         })
         
-        const newRepository = thisRepository[0];        
-        addInfoReporitory(newRepository);
+        const newRepository = thisRepository[0];  
+        infoRepository.innerHTML=''      
+        addInfoReporitory(newRepository, infoRepository);
     }
 
-    const addInfoReporitory = (newRepo) => {
-        const infoRepository = document.querySelector('.info-repository');
+    const addInfoReporitory = (newRepo, infoRepository) => {
         const informations = document.createElement('div');
         informations.setAttribute('class','informations');
        
