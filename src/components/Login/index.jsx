@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 // import { FiUser } from "react-icons/fi";
 
-const Login = () => {
+const Login = ({handleUserAddition}) => {
     const [inputUser, setInputUser] = useState('')
     
     const handleInputChange = (e) => {
@@ -12,10 +12,6 @@ const Login = () => {
 
     const handleInputUserClick = () => {
         handleUserAddition(inputUser);
-    }
-
-    const handleUserAddition = (user) => {
-        setInputUser(user);
     }
 
     return (

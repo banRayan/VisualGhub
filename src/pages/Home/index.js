@@ -7,15 +7,16 @@ import Login from '../../components/Login';
 
 const Home = () =>{
     const [repositories, setRepositories] = useState([]);
+    const [user, setUser] = useState('banRayan');
 
     useEffect(()=> {
         const fetchData = async () =>{
-            const response = await fetch('https://api.github.com/users/banRayan/repos');
+            const response = await fetch(`https://api.github.com/users/${user}/repos`);
             const data = await response.json();
             setRepositories(data);
         }
         fetchData();
-    }, [])
+    }, [user])
 
     const handleClickRepository = (id) => {  
         const infoRepository = document.querySelector('.info-repository');
@@ -41,7 +42,9 @@ const Home = () =>{
         infoRepository.appendChild(informations);
     }
 
-   
+    const handleUserAddition = (user) => {
+        setUser(user);
+    }
 
     return (
         <main className="home-container">
@@ -53,7 +56,7 @@ const Home = () =>{
                 <div className="info-repository"></div>
             </section>
             <section className="right-section">
-                <Login />
+                <Login handleUserAddition={handleUserAddition}/>
             </section> 
         </main>
     )
