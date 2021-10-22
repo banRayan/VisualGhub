@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import './styles.css'
 import Repositories from '../../components/Repositories';
 import Header from '../../components/Header';
+import Login from '../../components/Login';
 
 const Home = () =>{
     const [repositories, setRepositories] = useState([]);
@@ -40,6 +41,8 @@ const Home = () =>{
         infoRepository.appendChild(informations);
     }
 
+   
+
     return (
         <main className="home-container">
             <section className="left-section">
@@ -49,6 +52,9 @@ const Home = () =>{
                 <Repositories repositories={repositories} handleClickRepository={handleClickRepository}/>
                 <div className="info-repository"></div>
             </section>
+            <section className="right-section">
+                <Login />
+            </section> 
         </main>
     )
 }

@@ -13,8 +13,8 @@
     padding: 2rem;
 
     display: grid;
-    grid-template-columns: 5% 95%;
-    grid-template-areas: "left-section main-section";
+    grid-template-columns: 5% 80% 15%;
+    grid-template-areas: "left-section main-section right-section";
 }
 
 .left-section{
@@ -28,11 +28,22 @@
     
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .info-repository{
+    max-width: 600px;
     color: white;
     font: 400 1rem 'Poppins', Arial, Helvetica, sans-serif;
+    /* word-wrap: normal; */
 }
 
+.info-repository h1{
+    font: 700 2rem 'Poppins';
+    margin-bottom: 1rem;
+}
+
+.right-section{
+    grid-area: right-section;
+}
 
