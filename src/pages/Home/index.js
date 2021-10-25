@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 import './styles.css'
 import Repositories from '../../components/Repositories';
-import Header from '../../components/Header';
 import Login from '../../components/Login';
+import User from '../../components/User';
 
 const Home = () =>{
     const [repositories, setRepositories] = useState([]);
@@ -48,15 +48,15 @@ const Home = () =>{
 
     return (
         <main className="home-container">
-            <section className="left-section">
-                <Header />  
+            <section className="header">
+                <User user={user} />
+                <Login handleUserAddition={handleUserAddition}/> 
             </section>
             <section className="main-section">
                 <Repositories repositories={repositories} handleClickRepository={handleClickRepository}/>
                 <div className="info-repository"></div>
             </section>
             <section className="right-section">
-                <Login handleUserAddition={handleUserAddition}/>
             </section> 
         </main>
     )

@@ -4,9 +4,37 @@
     box-sizing: border-box;
 }
 
-.user-field{
-    background-color: white;
-    padding: .5rem;
-    border-radius: 10px;
-    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.041);
+.login-container{
+    margin: auto 0;
+    border: 1px solid rgba(255, 255, 255, 0.712);
+    border-radius: 5px;
+    padding: .3rem;
+
+    display: flex;
+    align-items: center;
 }
+
+.login-button-container{
+    background-color: white;
+    border-radius: 1px;
+    padding: 2px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container button{
+    font: 900 1rem Arial;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.user-field{
+    color: white;
+    background-color: transparent;
+    font: 400 .8rem 'Poppins', Arial, Helvetica, sans-serif;
+    border: none;
+    outline: none;
+}
+

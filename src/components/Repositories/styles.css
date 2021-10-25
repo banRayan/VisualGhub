@@ -6,11 +6,11 @@
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.041);
 
     font: 400 1rem Arial, Helvetica, sans-serif;
-    margin: 0 2rem;
     display: flex;
     flex-direction: column;
 
     overflow-y: auto;
+    margin-right: 2rem;
 }
 
 ::-webkit-scrollbar{

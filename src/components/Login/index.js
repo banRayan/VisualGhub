@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-// import { FiUser } from "react-icons/fi";
+import { FiCheck } from "react-icons/fi";
 
 import './styles.css'
 
@@ -24,7 +24,7 @@ const Login = ({handleUserAddition}) => {
                 value={inputUser}
                 className="user-field"
             />
-            <button onClick={handleInputUserClick}>Entrar</button>
+            <button onClick={handleInputUserClick}><div className="login-button-container"><FiCheck/></div></button>
         </div>
     )
 }
