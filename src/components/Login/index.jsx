@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 // import { FiUser } from "react-icons/fi";
 
+import './styles.css'
+
 const Login = ({handleUserAddition}) => {
     const [inputUser, setInputUser] = useState('')
     
