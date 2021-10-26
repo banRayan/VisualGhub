@@ -13,7 +13,15 @@ const Login = ({handleUserAddition}) => {
     }
 
     const handleInputUserClick = () => {
-        handleUserAddition(inputUser);
+        try{
+            if(inputUser === ''){
+                alert('insira um nome')
+            }else{
+                handleUserAddition(inputUser);
+            }
+        }catch(error){
+            console.log(error.message)
+        }
     }
 
     return (
