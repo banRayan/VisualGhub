@@ -18,6 +18,7 @@ const Login = ({handleUserAddition}) => {
                 alert('insira um nome')
             }else{
                 handleUserAddition(inputUser);
+                setInputUser('')
             }
         }catch(error){
             console.log(error.message)

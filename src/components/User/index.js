@@ -15,9 +15,11 @@ const User = ({user}) => {
         getUser();
     },[user])
 
+    
     return (
         <div className="user-container">
-            <div className="icon"></div>
+            <div className="user-picture">
+             </div>
             <div className="user-info-container">
                 <h1>{userInfo.name}</h1>
                 <p>{userInfo.login}</p>

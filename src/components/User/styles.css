@@ -2,16 +2,17 @@
     height: 3.5rem;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 
    
 }
 
-.icon{
-    color: #24292F;
-    padding: .8rem;
+.user-picture img{
+    background-color: white;
+    margin-right: 1rem;
+    border-radius: 5px;
 }
 
 .user-info-container{
