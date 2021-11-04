@@ -6,8 +6,9 @@ import Login from '../../components/Login';
 import User from '../../components/User';
 
 const Home = () =>{
-    const [repositories, setRepositories] = useState([]);
+
     const [user, setUser] = useState('banRayan');
+    const [repositories, setRepositories] = useState([]);
 
     useEffect(()=> {
         const fetchData = async () =>{
@@ -18,34 +19,24 @@ const Home = () =>{
         fetchData();
     }, [user])
 
-    const handleClickRepository = (id) => {  
-        const infoRepository = document.querySelector('.info-repository');
-        const thisRepository = repositories.filter(repo => {
-            return repo.id === id;
-        })
-        
-        const newRepository = thisRepository[0];  
-        infoRepository.innerHTML=''      
-        addInfoReporitory(newRepository, infoRepository);
-    }
-
-    const addInfoReporitory = (newRepo, infoRepository) => {
-        const informations = document.createElement('div');
-        informations.setAttribute('class','informations');
-       
-        informations.innerHTML = 
-        `
-        <h1>${newRepo.name}</h1>
-        <p>${newRepo.description}</p>
-        `;
-
-        infoRepository.appendChild(informations);
-    }
-
     const handleUserAddition = (user) => {
         setUser(user);
     }
 
+    const handleClickRepository = ( id ) => {
+        const [repo] = repositories.filter( repo => repo.id === id);
+        displayRepository(repo);
+        
+    }
+
+    const displayRepository = (repo) => {
+        const displayArea = document.querySelector('.info-repository');
+
+        const informations = `<h1>${repo.name}</h1>
+                              <p>${repo.description}</P.  `
+        displayArea.innerHTML = informations;
+    }
+    
     return (
         <main className="home-container">
             <section className="header">
@@ -56,8 +47,7 @@ const Home = () =>{
                 <Repositories repositories={repositories} handleClickRepository={handleClickRepository}/>
                 <div className="info-repository"></div>
             </section>
-            <section className="right-section">
-            </section> 
+            <section className="right-section"></section> 
         </main>
     )
 }

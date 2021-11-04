@@ -6,7 +6,7 @@
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.041);
 
     font: 400 1rem Arial, Helvetica, sans-serif;
-    display: flex;
+    display:flex;
     flex-direction: column;
 
     overflow-y: auto;

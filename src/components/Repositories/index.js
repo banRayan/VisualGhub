@@ -6,11 +6,15 @@ import Repository from '../Repository';
 const Repositories = ({repositories, handleClickRepository}) =>{
     return (
         <>
-                <div className="container">
+                <ul className="container">
                     {
-                        repositories.map(repo => (<Repository key={repositories.id} repo={repo} handleClickRepository={handleClickRepository}/>))
+                        repositories.map(repo => (
+                        <li key={repo.id}>
+                            <Repository repo={repo} handleClickRepository={handleClickRepository}/>
+                        </li>)
+                        )
                     }
-                </div>
+                </ul>
         </>
     );
 }
