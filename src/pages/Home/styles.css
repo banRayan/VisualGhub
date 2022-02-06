@@ -52,5 +52,26 @@
 
 .right-section{
     grid-area: right-section;
+    position: absolute;
 }
 
+
+/*Repository Information*/
+
+.repoCount{
+    display: flex;
+    flex-direction: row;
+    padding: 2rem 0; 
+}
+
+.cardCount{
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: #666;
+    border-radius: .5rem;
+    margin-right: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

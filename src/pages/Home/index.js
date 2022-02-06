@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
-import './styles.css'
 import Repositories from '../../components/Repositories';
 import Login from '../../components/Login';
 import User from '../../components/User';
+import './styles.css'
+
+// import { VscRepoForked } from "react-icons/vsc";
 
 const Home = () =>{
 
@@ -31,12 +33,29 @@ const Home = () =>{
 
     const displayRepository = (repo) => {
         const displayArea = document.querySelector('.info-repository');
-
-        const informations = `<h1>${repo.name}</h1>
-                              <p>${repo.description}</P.  `
-        displayArea.innerHTML = informations;
+        console.log(repo)
+        const repoData = `
+                                <div>
+                                    <div>
+                                        <h1>${repo.name}</h1>
+                                        <p>${repo.description}</p>
+                                    </div>
+                                    <div class="repoCount">
+                                        <div class="cardCount">
+                                            <p>${repo.forks}</p>
+                                        </div>
+                                        <div class="cardCount">
+                                            <p>${repo.watchers_count}</p>
+                                        </div>
+                                        <div class="cardCount">
+                                            <p>${repo.stargazers_count}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                `
+        displayArea.innerHTML = repoData;
     }
-    
+
     return (
         <main className="home-container">
             <section className="header">
@@ -47,7 +66,8 @@ const Home = () =>{
                 <Repositories repositories={repositories} handleClickRepository={handleClickRepository}/>
                 <div className="info-repository"></div>
             </section>
-            <section className="right-section"></section> 
+            <section className="right-section">
+            </section> 
         </main>
     )
 }
