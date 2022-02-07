@@ -5,7 +5,7 @@ import Login from '../../components/Login';
 import User from '../../components/User';
 import './styles.css'
 
-// import { VscRepoForked } from "react-icons/vsc";
+import { VscRepoForked } from "react-icons/vsc";
 
 const Home = () =>{
 
@@ -33,7 +33,6 @@ const Home = () =>{
 
     const displayRepository = (repo) => {
         const displayArea = document.querySelector('.info-repository');
-        console.log(repo)
         const repoData = `
                                 <div>
                                     <div>
@@ -43,12 +42,16 @@ const Home = () =>{
                                     <div class="repoCount">
                                         <div class="cardCount">
                                             <p>${repo.forks}</p>
+                                            <div class="cardIcon">
+                                            </div>
                                         </div>
                                         <div class="cardCount">
                                             <p>${repo.watchers_count}</p>
+                                            <div class="cardIcon"></div>
                                         </div>
                                         <div class="cardCount">
                                             <p>${repo.stargazers_count}</p>
+                                            <div class="cardIcon"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -64,7 +67,9 @@ const Home = () =>{
             </section>
             <section className="main-section">
                 <Repositories repositories={repositories} handleClickRepository={handleClickRepository}/>
-                <div className="info-repository"></div>
+                <div className="info-repository">
+                    
+                </div>
             </section>
             <section className="right-section">
             </section> 
