@@ -14,10 +14,10 @@
 
     display: grid;
     grid-template-rows: 10% 90%;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 30% 70%;
     grid-template-areas: 
-    "header header header"
-    "main-section main-section right-section";
+    "header header"
+    "main-section information-section";
 }
 
 .header{
@@ -36,24 +36,32 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: end;
 }
 
-.info-repository{
+/*Section to repository informations*/
+.information-section{
+    grid-area: information-section;
+
+    align-items: center;
+}
+
+.repository-description{
+    grid-area: repository-description;
     max-width: 600px;
     color: white;
     font: 400 1rem 'Poppins', Arial, Helvetica, sans-serif;
     /* word-wrap: normal; */
 }
 
-.info-repository h1{
+.repository-description h1{
     font: 700 2rem 'Poppins';
     margin-bottom: 1rem;
 }
 
-.right-section{
-    grid-area: right-section;
-    position: absolute;
-}
+/* .repository-data{
+} */
+
 
 
 /*Repository Information*/

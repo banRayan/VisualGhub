@@ -5,7 +5,7 @@ import Login from '../../components/Login';
 import User from '../../components/User';
 import './styles.css'
 
-import { VscRepoForked } from "react-icons/vsc";
+// import { VscRepoForked } from "react-icons/vsc";
 
 const Home = () =>{
 
@@ -32,31 +32,35 @@ const Home = () =>{
     }
 
     const displayRepository = (repo) => {
-        const displayArea = document.querySelector('.info-repository');
-        const repoData = `
+        const descriptionArea = document.querySelector('.repository-description');
+        const dataArea = document.querySelector('.repository-data');
+
+        const repoDescription = `
                                 <div>
-                                    <div>
-                                        <h1>${repo.name}</h1>
-                                        <p>${repo.description}</p>
-                                    </div>
-                                    <div class="repoCount">
-                                        <div class="cardCount">
-                                            <p>${repo.forks}</p>
-                                            <div class="cardIcon">
-                                            </div>
-                                        </div>
-                                        <div class="cardCount">
-                                            <p>${repo.watchers_count}</p>
-                                            <div class="cardIcon"></div>
-                                        </div>
-                                        <div class="cardCount">
-                                            <p>${repo.stargazers_count}</p>
-                                            <div class="cardIcon"></div>
-                                        </div>
-                                    </div>
+                                    <h1>${repo.name}</h1>
+                                    <p>${repo.description}</p>
                                 </div>
-                                `
-        displayArea.innerHTML = repoData;
+                                `;
+        
+        const repoData = `
+                        <div class="repoCount">
+                            <div class="cardCount">
+                                <p>${repo.forks}</p>
+                                <div class="cardIcon">
+                                </div>
+                            </div>
+                            <div class="cardCount">
+                                <p>${repo.watchers_count}</p>
+                                <div class="cardIcon"></div>
+                            </div>
+                            <div class="cardCount">
+                                <p>${repo.stargazers_count}</p>
+                                <div class="cardIcon"></div>
+                            </div>
+                        </div>
+                        `;
+        descriptionArea.innerHTML = repoDescription;
+        dataArea.innerHTML = repoData;
     }
 
     return (
@@ -67,11 +71,10 @@ const Home = () =>{
             </section>
             <section className="main-section">
                 <Repositories repositories={repositories} handleClickRepository={handleClickRepository}/>
-                <div className="info-repository">
-                    
-                </div>
             </section>
-            <section className="right-section">
+            <section className="information-section">
+                <div className="repository-description"></div>
+                <div className="repository-data"></div>
             </section> 
         </main>
     )
