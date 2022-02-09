@@ -36,14 +36,24 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: end;
 }
 
 /*Section to repository informations*/
 .information-section{
     grid-area: information-section;
 
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "repository-description ."
+    "repository-data .";
+
+}
+
+.titleContainer{
+    font: 600 1rem 'Poppins', Arial, Helvetica, sans-serif;
+    color: #666;
 }
 
 .repository-description{
@@ -51,7 +61,10 @@
     max-width: 600px;
     color: white;
     font: 400 1rem 'Poppins', Arial, Helvetica, sans-serif;
-    /* word-wrap: normal; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .repository-description h1{
@@ -59,8 +72,10 @@
     margin-bottom: 1rem;
 }
 
-/* .repository-data{
-} */
+.repository-data{
+    grid-area: repository-data;
+    max-width: 600px;
+}
 
 
 

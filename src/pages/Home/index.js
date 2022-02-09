@@ -21,6 +21,7 @@ const Home = () =>{
         fetchData();
     }, [user])
 
+
     const handleUserAddition = (user) => {
         setUser(user);
     }
@@ -28,12 +29,11 @@ const Home = () =>{
     const handleClickRepository = ( id ) => {
         const [repo] = repositories.filter( repo => repo.id === id);
         displayRepository(repo);
-        
     }
 
     const displayRepository = (repo) => {
-        const descriptionArea = document.querySelector('.repository-description');
-        const dataArea = document.querySelector('.repository-data');
+        const descriptionContainer = document.querySelector('.description-container');
+        const dataContainer = document.querySelector('.data-container');
 
         const repoDescription = `
                                 <div>
@@ -59,8 +59,8 @@ const Home = () =>{
                             </div>
                         </div>
                         `;
-        descriptionArea.innerHTML = repoDescription;
-        dataArea.innerHTML = repoData;
+        descriptionContainer.innerHTML = repoDescription;
+        dataContainer.innerHTML = repoData;
     }
 
     return (
@@ -73,8 +73,18 @@ const Home = () =>{
                 <Repositories repositories={repositories} handleClickRepository={handleClickRepository}/>
             </section>
             <section className="information-section">
-                <div className="repository-description"></div>
-                <div className="repository-data"></div>
+                <div className="repository-description">
+                    <div className="titleContainer">
+                        <p >Description</p>
+                    </div>
+                    <div className="description-container"></div>
+                </div>
+                <div className="repository-data">
+                    <div className="titleContainer">
+                        <p>Data</p>
+                    </div>
+                    <div className="data-container"></div>
+                </div>
             </section> 
         </main>
     )
