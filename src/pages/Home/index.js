@@ -40,6 +40,9 @@ const Home = () =>{
                                     <h1>${repo.name}</h1>
                                     <p>${repo.description}</p>
                                 </div>
+                                <div class="link-container">
+                                    <a href="${repo.html_url}" rel="external" target="_blank" class="link">👉 access the repository here</>
+                                </div>
                                 `;
         
         const repoData = `
@@ -58,6 +61,7 @@ const Home = () =>{
                                 <div class="cardIcon"></div>
                             </div>
                         </div>
+                        
                         `;
         descriptionContainer.innerHTML = repoDescription;
         dataContainer.innerHTML = repoData;
@@ -74,13 +78,14 @@ const Home = () =>{
             </section>
             <section className="information-section">
                 <div className="repository-description">
-                    <div className="titleContainer">
+                    <div className="title-container">
                         <p >Description</p>
                     </div>
                     <div className="description-container"></div>
                 </div>
+
                 <div className="repository-data">
-                    <div className="titleContainer">
+                    <div className="title-container">
                         <p>Data</p>
                     </div>
                     <div className="data-container"></div>

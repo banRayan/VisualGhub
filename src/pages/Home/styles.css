@@ -51,11 +51,6 @@
 
 }
 
-.titleContainer{
-    font: 600 1rem 'Poppins', Arial, Helvetica, sans-serif;
-    color: #666;
-}
-
 .repository-description{
     grid-area: repository-description;
     max-width: 600px;
@@ -75,8 +70,17 @@
 .repository-data{
     grid-area: repository-data;
     max-width: 600px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
+.title-container{
+    font: 600 1rem 'Poppins', Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 1rem 0;
+}
 
 
 /*Repository Information*/
@@ -116,4 +120,20 @@
     position: absolute;
     left: 75%;
     top: 75%;    
+}
+
+.link-container{
+    margin: 2rem 0;
+}
+
+.link{
+    font: 400 1rem 'Poppins', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #fff;
+}
+
+.link:hover{
+    text-decoration: underline;
+    color: rgb(65, 65, 240);
+    transition: .2s;
 }
