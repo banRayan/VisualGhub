@@ -1,17 +1,19 @@
 <h2 align="center">FetchAPI</h2>
 
 <h4 align="center">
-	🚧FetchAPI project under construction🚧
+	🚧 O projeto FetchAPI ainda está em construção 🚧
 </h4>
 
 ____
 
-<img src="https://user-images.githubusercontent.com/84761488/152876671-e6d186df-591a-4a2b-b7cd-4d2371dafaf3.png" width="1200">
+<img src="https://user-images.githubusercontent.com/84761488/153506333-51ee51c5-0d4a-4393-b546-3552e60f2374.png" >
 
 
-## about 
+## sobre 
 
-<p>The purpose of this project is to present github repositories in a new way.</p>
+<p>Esse projeto está sendo desenvolvido para aplicar e testar meus conhecimentos técnicos em relação ao desenvolvimento Web. Minha ideia foi sintetizar em um único projeto os principais conceitos necessários no mercado de trabalho atualmente, e assim me desafiando a estudar e aprender enquanto pratico.</p>
+
+<p></p>
 
 ## requirements
 
