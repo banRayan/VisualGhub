@@ -11,7 +11,10 @@ const Home = () =>{
 
     const [user, setUser] = useState('banRayan');
     const [repositories, setRepositories] = useState([]);
-
+    const [ techs, setTechs ] = useState();
+    
+    console.log(techs);
+    
     useEffect(()=> {
         const fetchData = async () =>{
             const response = await fetch(`https://api.github.com/users/${user}/repos`);
@@ -35,6 +38,10 @@ const Home = () =>{
         const descriptionContainer = document.querySelector('.description-container');
         const dataContainer = document.querySelector('.data-container');
 
+        fetch(repo.languages_url)
+        .then((response) => response.json())
+        .then((data) => setTechs(data));
+  
         const repoDescription = `
                                 <div>
                                     <h1>${repo.name}</h1>
@@ -61,11 +68,11 @@ const Home = () =>{
                                 <div class="cardIcon"></div>
                             </div>
                         </div>
-                        
                         `;
         descriptionContainer.innerHTML = repoDescription;
         dataContainer.innerHTML = repoData;
     }
+
 
     return (
         <main className="home-container">
@@ -89,6 +96,9 @@ const Home = () =>{
                         <p>Data</p>
                     </div>
                     <div className="data-container"></div>
+                </div>
+                <div className='repository-techs'>
+                
                 </div>
             </section> 
         </main>
