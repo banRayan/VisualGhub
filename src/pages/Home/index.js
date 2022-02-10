@@ -4,6 +4,7 @@ import Repositories from '../../components/Repositories';
 import Login from '../../components/Login';
 import User from '../../components/User';
 import './styles.css'
+import Menu from '../../components/Menu';
 
 // import { VscRepoForked } from "react-icons/vsc";
 
@@ -12,9 +13,9 @@ const Home = () =>{
     const [user, setUser] = useState('banRayan');
     const [repositories, setRepositories] = useState([]);
     const [ techs, setTechs ] = useState();
-    
-    console.log(techs);
-    
+
+    console.log(techs)
+
     useEffect(()=> {
         const fetchData = async () =>{
             const response = await fetch(`https://api.github.com/users/${user}/repos`);
@@ -73,12 +74,14 @@ const Home = () =>{
         dataContainer.innerHTML = repoData;
     }
 
-
     return (
         <main className="home-container">
-            <section className="header">
+            <header className="header">
                 <User user={user} />
                 <Login handleUserAddition={handleUserAddition}/> 
+            </header>
+            <section className="menu-section">
+                <Menu /> 
             </section>
             <section className="main-section">
                 <Repositories repositories={repositories} handleClickRepository={handleClickRepository}/>

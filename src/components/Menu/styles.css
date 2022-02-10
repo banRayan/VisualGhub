@@ -6,8 +6,9 @@
 
 .header-container{
     height: 3.5rem;
+    width: 3.5rem;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 8px;
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.041);
 
     display: flex;
