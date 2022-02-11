@@ -12,9 +12,6 @@ const Home = () =>{
 
     const [user, setUser] = useState('banRayan');
     const [repositories, setRepositories] = useState([]);
-    const [ techs, setTechs ] = useState();
-
-    console.log(techs)
 
     useEffect(()=> {
         const fetchData = async () =>{
@@ -37,22 +34,23 @@ const Home = () =>{
 
     const displayRepository = (repo) => {
         const descriptionContainer = document.querySelector('.description-container');
+        const infosContainer = document.querySelector('.infos-container');
         const dataContainer = document.querySelector('.data-container');
 
-        fetch(repo.languages_url)
-        .then((response) => response.json())
-        .then((data) => setTechs(data));
   
         const repoDescription = `
                                 <div>
                                     <h1>${repo.name}</h1>
                                     <p>${repo.description}</p>
                                 </div>
-                                <div class="link-container">
-                                    <a href="${repo.html_url}" rel="external" target="_blank" class="link">👉 access the repository here</>
-                                </div>
                                 `;
         
+        const repoInfos = `
+                            <div class="link-container">
+                                <a href="${repo.html_url}" rel="external" target="_blank" class="link">👉 access the repository here</>
+                            </div>
+                          `;
+
         const repoData = `
                         <div class="repoCount">
                             <div class="cardCount">
@@ -71,9 +69,10 @@ const Home = () =>{
                         </div>
                         `;
         descriptionContainer.innerHTML = repoDescription;
+        infosContainer.innerHTML = repoInfos;
         dataContainer.innerHTML = repoData;
     }
-
+    
     return (
         <main className="home-container">
             <header className="header">
@@ -94,14 +93,18 @@ const Home = () =>{
                     <div className="description-container"></div>
                 </div>
 
-                <div className="repository-data">
+                <div className="repository-infos">
                     <div className="title-container">
-                        <p>Data</p>
+                        <p>information</p>
+                    </div>
+                    <div className="infos-container"></div>
+                </div>
+                
+                <div className='repository-data'>
+                    <div className="title-container">
+                        <p>Counts</p>
                     </div>
                     <div className="data-container"></div>
-                </div>
-                <div className='repository-techs'>
-                
                 </div>
             </section> 
         </main>
