@@ -47,7 +47,7 @@ const Home = () =>{
         
         const repoInfos = `
                             <div class="link-container">
-                                <a href="${repo.html_url}" rel="external" target="_blank" class="link">👉 access the repository here</>
+                                <a href="${repo.html_url}" rel="external" target="_blank" class="link">👉 access the repository here 📁</>
                             </div>
                           `;
 
@@ -102,7 +102,7 @@ const Home = () =>{
                 
                 <div className='repository-data'>
                     <div className="title-container">
-                        <p>Counts</p>
+                        <p>Score</p>
                     </div>
                     <div className="data-container"></div>
                 </div>
