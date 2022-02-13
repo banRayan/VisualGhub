@@ -6,7 +6,7 @@
 
 ____
 
-<img src="https://user-images.githubusercontent.com/84761488/153506333-51ee51c5-0d4a-4393-b546-3552e60f2374.png" >
+<img src="https://user-images.githubusercontent.com/84761488/153732719-316921d1-1550-4e85-aae5-6a80455dc2fc.png" >
 
 
 ## sobre 
