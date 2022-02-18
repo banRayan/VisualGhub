@@ -1,19 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 
 import Repositories from '../../components/Repositories';
 import Login from '../../components/Login';
 import User from '../../components/User';
-import './styles.css'
 import Menu from '../../components/Menu';
+
+import './styles.css'
 
 // import { VscRepoForked } from "react-icons/vsc";
 //testing new branch 
 
 const Home = () =>{
-
+    
+    
     const [user, setUser] = useState('banRayan');
     const [repositories, setRepositories] = useState([]);
-
+    
     useEffect(()=> {
         const fetchData = async () =>{
             const response = await fetch(`https://api.github.com/users/${user}/repos`);
@@ -22,8 +24,7 @@ const Home = () =>{
         }
         fetchData();
     }, [user])
-
-
+    
     const handleUserAddition = (user) => {
         setUser(user);
     }
