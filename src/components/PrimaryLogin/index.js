@@ -1,4 +1,5 @@
 import React from 'react';
+import { FiGithub } from "react-icons/fi";
 import './styles.css';
 
 export const PrimaryLogin = () => {
@@ -12,10 +13,15 @@ export const PrimaryLogin = () => {
             <div className='logo'>VisualGit</div>
         </div>
         <div className='input-container'>
-            <input type='text' className='input'></input>
-            <button className='login-button'>Access</button>
+            <div className='input-field'>
+              <h4><FiGithub/></h4>
+              <input type='text' className='input' placeholder='username'></input>
+            </div>
         </div>
-
+        <div className='button-container'>
+          <button>Access</button>
+          <p>Don't have an account?<br/> <a target="_blank" rel="noreferrer" href="https://github.com/">Register Github</a></p>
+        </div>
     </main>
   )
 }

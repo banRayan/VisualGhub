@@ -1,6 +1,6 @@
 .primarylogin-container{
     height: 400px;
-    width: 600px;
+    width: 650px;
 
     background-color: #fff;
     border-radius: 5px;
@@ -15,17 +15,17 @@
 
 .heading{
     color: rgb(73, 73, 73);
+    margin-bottom: 1.5rem;
+
 }
 
 .title{
     font: 500 2rem 'Poppins', Arial, Helvetica, sans-serif;
-    padding-bottom: 1rem;
+    margin-bottom: .5rem;
 }
 
 .description{
     font: 400 1rem 'Poppins', Arial, Helvetica, sans-serif;
-    padding-bottom: 1rem;
-
 }
 
 .logo{
@@ -40,16 +40,63 @@
     align-items: center;
 }
 
+.input-field{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.input-field > h4{
+    color: black;
+    position: absolute;
+    top: 20%;
+    left: 3%;
+}
+
 .input{
-    height: 30px;
+    height: 40px;
     width: 250px;
     border-radius: 5px;
     border: 1px solid rgb(73, 73, 73);
+    margin-bottom: 1rem;
+    padding-left: 2rem;
 }
 
-.login-button button{
+.input:placeholder-shown{
+    font-size: 1rem;
+    font-weight: 500;
+    
+}
+
+.button-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container > button{
+    height: 40px;
+    width: 250px;
+
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 1rem;
     font: 500 1rem 'Poppins', Arial, Helvetica, sans-serif;
+    color: #fff;
     background-color: #666;
-    border: 1px solid rgb(73, 73, 73);
-
+    cursor: pointer;
 }
+
+.button-container > p {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+.input-container > p > a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
