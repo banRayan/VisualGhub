@@ -24,12 +24,13 @@
     justify-content: center;
 }
 
-.login-container button{
+.login-button-container.login-container button{
     font: 900 1rem Arial;
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
+
 .user-field{
     color: white;
     background-color: transparent;
