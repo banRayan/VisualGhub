@@ -11,8 +11,6 @@ import './styles.css'
 //testing new branch 
 
 const Home = () =>{
-    
-    
     const [user, setUser] = useState('banRayan');
     const [repositories, setRepositories] = useState([]);
     
@@ -39,7 +37,6 @@ const Home = () =>{
         const infosContainer = document.querySelector('.infos-container');
         const dataContainer = document.querySelector('.data-container');
 
-  
         const repoDescription = `
                                 <div>
                                     <h1>${repo.name}</h1>

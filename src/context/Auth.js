@@ -5,20 +5,22 @@ export const AuthContext = createContext({});
 
 export const AuthProvider = (props) => {
     const [ data, setData] = useState([]);
+    const [username, setUsername] = useState('banRayan');
 
     useEffect(() => {
         const fetchData = async () => {
-            await axios.get('https://api.github.com/users/banRayan')
+            await axios.get(`https://api.github.com/users/${username}`)
                 .then(response => setData(response.data))
         }
         fetchData()
-    },[])
+    },[username])
 
-  return (
+    return (
     <AuthContext.Provider 
      value={{
          data,
-         setData
+         setData,
+         setUsername
         }}
      >
          {props.children}

@@ -1,8 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FiGithub } from "react-icons/fi";
+import { useAuth } from '../../context/Auth';
 import './styles.css';
 
 export const PrimaryLogin = () => {
+  const [inputUsername, setInputUsername] = useState([]);
+  const { setUsername } = useAuth();
+
+  const handleInputChange = (e) => {
+    setInputUsername(e.target.value)
+  } 
+
+  const handleLoginButtonClick = () => {
+    try{
+      if (inputUsername === '') {
+        alert('insira um nome')
+      }else{
+        setUsername(inputUsername)
+        setInputUsername('')
+      }
+    }catch(error){
+      alert(error.mesage)
+    }
+  }
+
   return (
     <main className='primarylogin-container'>
         <div className='heading-container'>
@@ -15,11 +36,19 @@ export const PrimaryLogin = () => {
         <div className='input-container'>
             <div className='input-field'>
               <h4><FiGithub/></h4>
-              <input type='text' className='input' placeholder='username'></input>
+              <input 
+                type='text'
+                className='input'
+                placeholder='username'
+                onChange={handleInputChange}
+                value={inputUsername}
+              ></input>
             </div>
         </div>
         <div className='button-container'>
-          <button>Access</button>
+          <button
+            onClick={handleLoginButtonClick}
+          >Access</button>
           <p>Don't have an account?<br/> <a target="_blank" rel="noreferrer" href="https://github.com/">Register Github</a></p>
         </div>
     </main>
