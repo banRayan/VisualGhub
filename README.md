@@ -6,20 +6,35 @@
 
 ____
 
-<img src="https://user-images.githubusercontent.com/84761488/153506333-51ee51c5-0d4a-4393-b546-3552e60f2374.png" >
+<img src="https://user-images.githubusercontent.com/84761488/153732719-316921d1-1550-4e85-aae5-6a80455dc2fc.png" >
 
 
-## sobre 
+## Sobre 
 
-<p>Esse projeto está sendo desenvolvido para aplicar e testar meus conhecimentos técnicos em relação ao desenvolvimento Web. Minha ideia foi sintetizar em um único projeto os principais conceitos necessários no mercado de trabalho atualmente, e assim me desafiando a estudar e aprender enquanto pratico.</p>
+<p>De antemão informo que esse projeto foi criado com objetivo de mostrar minha capacitação técnica, sendo um projeto portfólio. O mesmo está sendo desenvolvido para aplicar e testar meus conhecimentos técnicos em relação ao desenvolvimento Web. </p>
+<p>Minha ideia foi sintetizar em um único projeto os principais conceitos e recursos necessários utilizados no mercado de trabalho atualmente, e assim me desafiando a aprender enquanto pratico.</p>
+<p>O projeto tem como base a língua inglesa tanto no desenvolvimento quanto no UI design, isso porque ainda estou no processo de aprendizado do idioma e acredito que quanto maior o contato prático maior será a curva de aprendizagem.</p>
+<p></p>
+
+## Tecnologia
+
+#### ReactJs
+<p>A principal tecnologia utilizada no projeto é a biblioteca ReactJS, baseada na linguagem JavaScript.</p>
+
+## Recursos
+
+<p>O projeto conta com recursos fornecidos pelo react e libs externas, sendo esses:</p>
+
+* React Router DOM - Roteamento client-side
+* ContextAPI - Descentralização de dados
+* Axios - HTTP Client
+* React Icons - ícones
 
 <p></p>
 
-## requirements
+## Requisitos
 
 <p>Node</p>
 
-## technologies
 
-<p>ReactJs</p>
 
