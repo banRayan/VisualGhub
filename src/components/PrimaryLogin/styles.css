@@ -14,7 +14,7 @@
 }
 
 .heading{
-    color: rgb(73, 73, 73);
+    color: #24292F;
     margin-bottom: 1.5rem;
 
 }
@@ -26,11 +26,12 @@
 
 .description{
     font: 400 1rem 'Poppins', Arial, Helvetica, sans-serif;
+    color: #5E6873;
 }
 
 .logo{
     font: 600 1.2rem 'Poppins', Arial, Helvetica, sans-serif;
-    color: gray;
+    color: #24292F;
 }
 
 .input-container{
@@ -48,7 +49,7 @@
 }
 
 .input-field > h4{
-    color: black;
+    color: #24292F;
     position: absolute;
     top: 20%;
     left: 3%;
@@ -58,12 +59,13 @@
     height: 40px;
     width: 250px;
     border-radius: 5px;
-    border: 1px solid rgb(73, 73, 73);
+    border: 1px solid #24292F;
     margin-bottom: 1rem;
     padding-left: 2rem;
 }
 
 .input:placeholder-shown{
+    color: #5E6873;
     font-size: 1rem;
     font-weight: 500;
     
@@ -85,18 +87,31 @@
     margin-bottom: 1rem;
     font: 500 1rem 'Poppins', Arial, Helvetica, sans-serif;
     color: #fff;
-    background-color: #666;
+    background-color: #424B55;
     cursor: pointer;
+    transition: .5s;
+
 }
 
 .button-container > p {
     font-size: 14px;
-    color: #666;
+    color: #5E6873;
     text-align: center;
 }
 
-.input-container > p > a {
+.button-container > button:hover{
+    background-color: #24292F;
+}
+
+
+.button-container > p > a {
+    font-weight: 500;
+    color: #5E6873;
     text-decoration: none;
     cursor: pointer;
 }
 
+.button-container > p > a:hover{
+    text-decoration: underline;
+    color: #24292F;
+}

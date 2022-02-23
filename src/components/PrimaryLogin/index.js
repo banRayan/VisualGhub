@@ -20,7 +20,7 @@ export const PrimaryLogin = () => {
         alert('insira um nome')
       }else{
         setUsername(inputUsername)
-        navigate('/')
+        navigate('/home')
       }
     }catch(error){
       alert(error.mesage)
@@ -52,7 +52,7 @@ export const PrimaryLogin = () => {
           <button
             onClick={handleLoginButtonClick}
           >Access</button>
-          <p>Don't have an account?<br/> <a target="_blank" rel="noreferrer" href="https://github.com/">Register Github</a></p>
+          <p>Don't have an account?<br/><a target="_blank" rel="noreferrer" href="https://github.com/">Register Github</a></p>
         </div>
     </main>
   )
