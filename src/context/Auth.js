@@ -15,6 +15,7 @@ export const AuthProvider = (props) => {
         fetchData()
     },[username])
 
+    console.log(data)
     return (
     <AuthContext.Provider 
      value={{
