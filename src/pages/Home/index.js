@@ -1,31 +1,33 @@
 import React, { useState, useEffect} from 'react';
 
 import Repositories from '../../components/Repositories';
-import Login from '../../components/Login';
+// import Login from '../../components/Login';
 import User from '../../components/User';
 import Menu from '../../components/Menu';
 
 import './styles.css'
+import { useAuth } from '../../context/Auth';
 
 // import { VscRepoForked } from "react-icons/vsc";
 //testing new branch 
 
 const Home = () =>{
-    const [user, setUser] = useState('banRayan');
+    const { username } = useAuth();
+    // const [user, setUser] = useState('banRayan');
     const [repositories, setRepositories] = useState([]);
     
     useEffect(()=> {
         const fetchData = async () =>{
-            const response = await fetch(`https://api.github.com/users/${user}/repos`);
+            const response = await fetch(`https://api.github.com/users/${username}/repos`);
             const data = await response.json();
             setRepositories(data);
         }
         fetchData();
-    }, [user])
+    }, [username])
     
-    const handleUserAddition = (user) => {
-        setUser(user);
-    }
+    // const handleUserAddition = (user) => {
+    //     setUser(user);
+    // }
 
     const handleClickRepository = ( id ) => {
         const [repo] = repositories.filter( repo => repo.id === id);
@@ -75,8 +77,8 @@ const Home = () =>{
     return (
         <main className="home-container">
             <header className="header">
-                <User user={user} />
-                <Login handleUserAddition={handleUserAddition}/> 
+                <User user={username} />
+                {/* <Login handleUserAddition={handleUserAddition}/>  */}
             </header>
             <section className="menu-section">
                 <Menu /> 

@@ -21,6 +21,7 @@ export const AuthProvider = (props) => {
      value={{
          data,
          setData,
+         username,
          setUsername
         }}
      >

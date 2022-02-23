@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { FiGithub } from "react-icons/fi";
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/Auth';
 import './styles.css';
 
 export const PrimaryLogin = () => {
   const [inputUsername, setInputUsername] = useState([]);
   const { setUsername } = useAuth();
+
+  const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     setInputUsername(e.target.value)
@@ -17,7 +20,7 @@ export const PrimaryLogin = () => {
         alert('insira um nome')
       }else{
         setUsername(inputUsername)
-        setInputUsername('')
+        navigate('/')
       }
     }catch(error){
       alert(error.mesage)
