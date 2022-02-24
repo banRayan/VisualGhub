@@ -7,11 +7,11 @@ import Routes from './router/routes';
 
 const App = () => {
     return(
-        <AuthProvider>
-            <Router>
-                <Routes />
-            </Router>
-        </AuthProvider>
+            <AuthProvider>
+                <Router>
+                    <Routes />
+                </Router>
+            </AuthProvider>
     )
 }
 
