@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
-import './styles.css'
-
+import { Container, Picture, UserContainer } from './styles';
 
 const User = ({user}) => {
     const [userInfo, setUserInfo] = useState([])
@@ -17,14 +15,13 @@ const User = ({user}) => {
 
     
     return (
-        <div className="user-container">
-            <div className="user-picture">
-             </div>
-            <div className="user-info-container">
+        <Container>
+            <Picture></Picture>
+            <UserContainer>
                 <h1>{userInfo.name}</h1>
                 <p>{userInfo.login}</p>
-            </div>
-        </div>
+            </UserContainer>
+        </Container>
     )
 }
 

@@ -1,4 +1,7 @@
-.container{
+import styled from "styled-components";
+import { fonts } from '../../styles/themes/theme';
+
+export const Container = styled.ul`
     width: 500px;
     min-height: 450px;
     max-height: 650px; 
@@ -6,19 +9,24 @@
     border-radius: 8px;
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.041);
 
-    font: 400 1rem Arial, Helvetica, sans-serif;
+    font: ${fonts.text400};
     display:flex;
     flex-direction: column;
 
     overflow-y: auto;
     margin-right: 2rem;
-}
 
-::-webkit-scrollbar{
+    &::-webkit-scrollbar{
     background-color: white;
     border-radius: 0 10px 10px 0;
-}
+    }
 
-::-webkit-scrollbar-thumb{
+    &::-webkit-scrollbar-thumb{
     border-radius: 10px;
-}
+    }
+`;
+
+export const List = styled.li`
+    
+    
+`;

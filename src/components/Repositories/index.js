@@ -1,20 +1,21 @@
 import React from 'react';
 
-import './styles.css'
-
+import { Container, List } from './styles';
 import Repository from '../Repository';
+// import './styles.css'
+
 const Repositories = ({repositories, handleClickRepository}) =>{
     return (
         <>
-                <ul className="container">
+                <Container>
                     {
                         repositories.map(repo => (
-                        <li key={repo.id}>
+                        <List key={repo.id}>
                             <Repository repo={repo} handleClickRepository={handleClickRepository}/>
-                        </li>)
+                        </List>)
                         )
                     }
-                </ul>
+                </Container>
         </>
     );
 }
