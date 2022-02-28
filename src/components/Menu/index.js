@@ -4,23 +4,23 @@ import { FiList } from "react-icons/fi";
 import { FiUser } from "react-icons/fi"
 import { FiArchive } from "react-icons/fi"
 
-import './styles.css'
+import { Container, Header } from './styles';
 
 const Menu = () => {
     return (
-        <div className='menu-container'>
-            <div className="header-container">
+        <Container>
+            <Header>
                 <FiList/>
-            </div>
+            </Header>
             <Link to={'/profile'}>
-                <div className='header-container'>
+                <Header>
                     <FiUser />
-                </div>
+                </Header>
             </Link>
-            <div className='header-container'>
+            <Header>
                 <FiArchive />
-            </div>
-        </div>
+            </Header>
+        </Container>
     )
 }
 

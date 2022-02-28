@@ -1,32 +1,28 @@
 import React, { useState, useEffect} from 'react';
+import { Container, DataContainer, Header, Main, MenuContainer, RepoData, RepoDescription, RepoInformation, Title } from './styles'
+import './styles.css'
 
 import Repositories from '../../components/Repositories';
-import Login from '../../components/Login';
 import User from '../../components/User';
 import Menu from '../../components/Menu';
 
-import './styles.css'
-
-// import { VscRepoForked } from "react-icons/vsc";
-//testing new branch 
+import { useAuth } from '../../context/Auth';
 
 const Home = () =>{
-    const [user, setUser] = useState('banRayan');
+    const { username } = useAuth();
     const [repositories, setRepositories] = useState([]);
     
     useEffect(()=> {
         const fetchData = async () =>{
-            const response = await fetch(`https://api.github.com/users/${user}/repos`);
+            const response = await fetch(`https://api.github.com/users/${username}/repos`);
             const data = await response.json();
             setRepositories(data);
         }
         fetchData();
-    }, [user])
-    
-    const handleUserAddition = (user) => {
-        setUser(user);
-    }
+    }, [username])
 
+
+    
     const handleClickRepository = ( id ) => {
         const [repo] = repositories.filter( repo => repo.id === id);
         displayRepository(repo);
@@ -67,46 +63,38 @@ const Home = () =>{
                             </div>
                         </div>
                         `;
+                        
         descriptionContainer.innerHTML = repoDescription;
         infosContainer.innerHTML = repoInfos;
         dataContainer.innerHTML = repoData;
     }
     
     return (
-        <main className="home-container">
-            <header className="header">
-                <User user={user} />
-                <Login handleUserAddition={handleUserAddition}/> 
-            </header>
-            <section className="menu-section">
+        <Container>
+            <Header>
+                <User user={username} />
+            </Header>
+            <MenuContainer>
                 <Menu /> 
-            </section>
-            <section className="main-section">
+            </MenuContainer>
+            <Main>
                 <Repositories repositories={repositories} handleClickRepository={handleClickRepository}/>
-            </section>
-            <section className="information-section">
-                <div className="repository-description">
-                    <div className="title-container">
-                        <p >Description</p>
-                    </div>
+            </Main>
+            <DataContainer>
+                <RepoDescription>
+                    <Title>Description</Title>
                     <div className="description-container"></div>
-                </div>
-
-                <div className="repository-infos">
-                    <div className="title-container">
-                        <p>information</p>
-                    </div>
+                </RepoDescription>
+                <RepoInformation>
+                    <Title>Information</Title>
                     <div className="infos-container"></div>
-                </div>
-                
-                <div className='repository-data'>
-                    <div className="title-container">
-                        <p>Score</p>
-                    </div>
+                </RepoInformation>
+                <RepoData>
+                    <Title>Score</Title>
                     <div className="data-container"></div>
-                </div>
-            </section> 
-        </main>
+                </RepoData>
+            </DataContainer> 
+        </Container>
     )
 }
 

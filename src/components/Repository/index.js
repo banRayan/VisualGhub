@@ -1,6 +1,5 @@
 import React from 'react';
-
-import './styles.css';
+import { Container, Status, StatusContainer, Techs } from './styles';
 
 const Repository = ({repo, handleClickRepository}) => {
     const getRepositoryStatus = () =>{
@@ -9,13 +8,13 @@ const Repository = ({repo, handleClickRepository}) => {
     }
 
     return ( 
-        <button onClick={() => handleClickRepository(repo.id)} className="repository-container">
-            <div className="status-container">
+        <Container onClick={() => handleClickRepository(repo.id)}>
+            <StatusContainer>
                 {repo.name}
-                <div className="repository-status">{getRepositoryStatus()}</div>
-            </div>
-            <div className="techs">{repo.language}</div>
-        </button>
+                <Status>{getRepositoryStatus()}</Status>
+            </StatusContainer>
+            <Techs>{repo.language}</Techs>
+        </Container>
     );
 }
 

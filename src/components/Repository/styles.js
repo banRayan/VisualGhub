@@ -1,6 +1,9 @@
-.repository-container{
+import styled from "styled-components";
+import { colors } from '../../styles/themes/theme';
+
+export const Container = styled.button`
     width: 100%;
-    color: #24292F;
+    color: ${colors.primary};
     font: 700 1.2rem 'Poppins', Arial, Helvetica, sans-serif;
     text-decoration: none;
 
@@ -10,31 +13,30 @@
     text-align: left;
     cursor: pointer;
     transition: .3s;
-}
 
-.status-container{
+    &:hover{
+    font: 700 1.3rem 'Poppins', Arial, Helvetica, sans-serif;
+    }
+`
+
+export const StatusContainer = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-}
+`;
 
-.repository-container:hover{
-    font: 700 1.3rem 'Poppins', Arial, Helvetica, sans-serif;
-
-}
-.repository-status{
+export const Status = styled.div`
     padding: 5px 10px;
     background-color: #2C974B;
     border-radius: 5px;
     color: white;
     font: 700 .7rem Arial;
     text-align: center;
+`;
 
-}
-
-.techs{
-    color: rgba(102, 102, 102, 0.637);
+export const Techs = styled.div`
+    color: ${colors.secondary100};
     font: 500 .9rem 'Poppins', Arial, Helvetica, sans-serif;
     margin-top: .3rem;
-}
+`;

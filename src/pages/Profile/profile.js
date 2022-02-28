@@ -1,15 +1,15 @@
 import React from "react";
 import { useAuth } from "../../context/Auth";
-import './styles.css';
+import { Container } from "./styles";
 
 const Profile = () => {
     const { data } = useAuth();
 
     return(
-        <main className="profile-container">
+        <Container>
             <h1>Profile</h1>
             <p>{data.name}</p>
-        </main>
+        </Container>
     )
 }
 

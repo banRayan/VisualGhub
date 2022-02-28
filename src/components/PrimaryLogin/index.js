@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
+import { Title, Container, HeadingContainer, Heading, Description, Logo, InputContainer, InputField, Input, ButtonContainer, Icon, Button, Paragraph, Link } from './styles';
+
 import { FiGithub } from "react-icons/fi";
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/Auth';
-import './styles.css';
 
 export const PrimaryLogin = () => {
   const [inputUsername, setInputUsername] = useState([]);
   const { setUsername } = useAuth();
+
+  const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     setInputUsername(e.target.value)
@@ -17,7 +21,7 @@ export const PrimaryLogin = () => {
         alert('insira um nome')
       }else{
         setUsername(inputUsername)
-        setInputUsername('')
+        navigate('/home')
       }
     }catch(error){
       alert(error.mesage)
@@ -25,32 +29,32 @@ export const PrimaryLogin = () => {
   }
 
   return (
-    <main className='primarylogin-container'>
-        <div className='heading-container'>
-            <div className='heading'>
-                <div className='title'>Enter your Github<br/> username</div>
-                <div className='description'>With your username we can access your gitHub data</div>
-            </div>
-            <div className='logo'>VisualGit</div>
-        </div>
-        <div className='input-container'>
-            <div className='input-field'>
-              <h4><FiGithub/></h4>
-              <input 
+    <Container>
+        <HeadingContainer>
+            <Heading>
+                <Title>Enter your Github<br/> username</Title>
+                <Description>With your username we can access your gitHub data</Description>
+            </Heading>
+            <Logo>VisualGit</Logo>
+        </HeadingContainer>
+        <InputContainer>
+            <InputField>
+              <Icon><FiGithub/></Icon>
+              <Input 
                 type='text'
                 className='input'
                 placeholder='username'
                 onChange={handleInputChange}
                 value={inputUsername}
-              ></input>
-            </div>
-        </div>
-        <div className='button-container'>
-          <button
+              ></Input>
+            </InputField>
+        </InputContainer>
+        <ButtonContainer>
+          <Button
             onClick={handleLoginButtonClick}
-          >Access</button>
-          <p>Don't have an account?<br/> <a target="_blank" rel="noreferrer" href="https://github.com/">Register Github</a></p>
-        </div>
-    </main>
+          >Access</Button>
+          <Paragraph>Don't have an account?<br/><Link target="_blank" rel="noreferrer" href="https://github.com/">Register Github</Link></Paragraph>
+        </ButtonContainer>
+    </Container>
   )
 }

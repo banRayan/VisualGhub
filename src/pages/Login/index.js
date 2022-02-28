@@ -1,12 +1,12 @@
 import React from 'react';
 import { PrimaryLogin } from '../../components/PrimaryLogin';
-import './styles.css';
+import { Container } from './styles';
 
 const Login = () => {
   return (
-    <main className="loginPage-container">
+    <Container>
         <PrimaryLogin/>
-    </main>
+    </Container>
   )
 }
 
