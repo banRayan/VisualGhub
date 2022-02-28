@@ -20,6 +20,8 @@ const Home = () =>{
         }
         fetchData();
     }, [username])
+
+
     
     const handleClickRepository = ( id ) => {
         const [repo] = repositories.filter( repo => repo.id === id);
@@ -61,6 +63,7 @@ const Home = () =>{
                             </div>
                         </div>
                         `;
+                        
         descriptionContainer.innerHTML = repoDescription;
         infosContainer.innerHTML = repoInfos;
         dataContainer.innerHTML = repoData;
