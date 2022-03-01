@@ -10,10 +10,13 @@ export const Container = styled.div`
     justify-content: center;
 `;
 
+
 export const Picture = styled.img`
-    background-color: white;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 2px solid #fff;
     margin-right: 1rem;
-    border-radius: 5px;
 `;
 
 export const UserContainer = styled.div`

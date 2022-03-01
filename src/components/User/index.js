@@ -1,25 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useAuth } from '../../context/Auth';
 import { Container, Picture, UserContainer } from './styles';
 
-const User = ({user}) => {
-    const [userInfo, setUserInfo] = useState([])
+const User = () => {
+    const { data } = useAuth();
 
-    useEffect(()=>{
-        const getUser = async() =>{
-            let response = await fetch(`https://api.github.com/users/${user}`);
-            let data = await response.json();
-            setUserInfo(data);
-        }
-        getUser();
-    },[user])
-
-    
     return (
         <Container>
-            <Picture></Picture>
+            <Picture src={data.avatar_url} alt="dd"></Picture>
             <UserContainer>
-                <h1>{userInfo.name}</h1>
-                <p>{userInfo.login}</p>
+                <h1>{data.name}</h1>
+                <p>{data.login}</p>
             </UserContainer>
         </Container>
     )

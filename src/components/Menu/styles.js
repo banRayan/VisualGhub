@@ -3,7 +3,7 @@ import { colors, fonts } from '../../styles/themes/theme';
 
 export const Container = styled.div`
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 5px;
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.041);
 `;
 
