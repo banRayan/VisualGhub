@@ -1,6 +1,5 @@
 import React, { useState, useEffect} from 'react';
-import { Container, DataContainer, Header, Main, MenuContainer, RepoData, RepoDescription, RepoInformation, Title } from './styles'
-import './styles.css'
+import { CardCount, Container, DataContainer, DescriptionContainer, Header, IconCard, InfosContainer, Link, Main, MenuContainer, ParamentContainer, RepoData, RepoDescription, RepoInformation, Title } from './styles'
 
 import Repositories from '../../components/Repositories';
 import User from '../../components/User';
@@ -11,6 +10,7 @@ import { useAuth } from '../../context/Auth';
 const Home = () =>{
     const { username } = useAuth();
     const [repositories, setRepositories] = useState([]);
+    const [ repoData, setRepoData ] = useState([]);
     
     useEffect(()=> {
         const fetchData = async () =>{
@@ -24,55 +24,15 @@ const Home = () =>{
 
     
     const handleClickRepository = ( id ) => {
-        const [repo] = repositories.filter( repo => repo.id === id);
-        displayRepository(repo);
-    }
-
-    const displayRepository = (repo) => {
-        const descriptionContainer = document.querySelector('.description-container');
-        const infosContainer = document.querySelector('.infos-container');
-        const dataContainer = document.querySelector('.data-container');
-
-        const repoDescription = `
-                                <div>
-                                    <h1>${repo.name}</h1>
-                                    <p>${repo.description}</p>
-                                </div>
-                                `;
-        
-        const repoInfos = `
-                            <div class="link-container">
-                                <a href="${repo.html_url}" rel="external" target="_blank" class="link">👉 access the repository here 📁</>
-                            </div>
-                          `;
-
-        const repoData = `
-                        <div class="repoCount">
-                            <div class="cardCount">
-                                <p>${repo.forks}</p>
-                                <div class="cardIcon">
-                                </div>
-                            </div>
-                            <div class="cardCount">
-                                <p>${repo.watchers_count}</p>
-                                <div class="cardIcon"></div>
-                            </div>
-                            <div class="cardCount">
-                                <p>${repo.stargazers_count}</p>
-                                <div class="cardIcon"></div>
-                            </div>
-                        </div>
-                        `;
-                        
-        descriptionContainer.innerHTML = repoDescription;
-        infosContainer.innerHTML = repoInfos;
-        dataContainer.innerHTML = repoData;
+        const [ repo ] = repositories.filter( repo => repo.id === id);
+        setRepoData(repo)
+        console.log(repoData)
     }
     
     return (
         <Container>
             <Header>
-                <User user={username} />
+                <User/>
             </Header>
             <MenuContainer>
                 <Menu /> 
@@ -83,15 +43,33 @@ const Home = () =>{
             <DataContainer>
                 <RepoDescription>
                     <Title>Description</Title>
-                    <div className="description-container"></div>
+                    <DescriptionContainer>
+                        <h1>{repoData.name}</h1>
+                        <p>{repoData.description}</p>
+                    </DescriptionContainer>
                 </RepoDescription>
                 <RepoInformation>
                     <Title>Information</Title>
-                    <div className="infos-container"></div>
+                    <InfosContainer>
+                        <Link href={repoData.html_url} rel="noreferrer" target="_blank" className='link'>👉 access the repository here 📁</Link>
+                    </InfosContainer>
                 </RepoInformation>
                 <RepoData>
                     <Title>Score</Title>
-                    <div className="data-container"></div>
+                    <ParamentContainer>
+                            <CardCount>
+                                <p>{repoData.forks}</p>
+                                <IconCard></IconCard>
+                            </CardCount>
+                            <CardCount>
+                                <p>{repoData.watchers_count}</p>
+                                <IconCard></IconCard>
+                            </CardCount>
+                            <CardCount>
+                                <p>{repoData.stargazers_count}</p>
+                                <IconCard></IconCard>
+                            </CardCount>
+                    </ParamentContainer>
                 </RepoData>
             </DataContainer> 
         </Container>

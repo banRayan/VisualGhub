@@ -91,3 +91,60 @@ export const RepoData = styled.div`
     flex-direction: column;
     justify-content: flex-start;
 `;
+
+//innners
+
+export const DescriptionContainer = styled.div``;
+
+export const InfosContainer = styled.div``;
+
+export const ParamentContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+export const CardCount = styled.div`
+    height: 2.8rem;
+    width: 2.8rem;
+    margin: 1rem 0; 
+
+    background-color:  rgb(255, 255, 255);
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.041);
+
+    font: 600 1rem 'Poppins', Arial, Helvetica, sans-serif;
+    color: #24292F;
+    border-radius: 5px;
+    margin-right: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+`;
+
+export const IconCard = styled.div`
+     height: 1.5rem;
+    width: 1.5rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.041);
+
+
+    position: absolute;
+    left: 75%;
+    top: 75%;    
+`;
+
+export const Link = styled.a`
+    font: 400 1rem 'Poppins', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #fff;
+    
+    &:hover{
+    text-decoration: underline;
+    color: rgb(65, 65, 240);
+    transition: .2s;
+}
+`;
+

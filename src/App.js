@@ -3,6 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { AuthProvider } from './context/Auth';
 
 import Routes from './router/routes';
+import GlobalStyle from './styles/themes/GlobalStyle';
 
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
             <AuthProvider>
                 <Router>
                     <Routes />
+                    <GlobalStyle />
                 </Router>
             </AuthProvider>
     )

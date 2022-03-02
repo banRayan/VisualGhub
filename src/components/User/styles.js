@@ -12,10 +12,9 @@ export const Container = styled.div`
 
 
 export const Picture = styled.img`
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    border: 2px solid #fff;
+    height: 65px;
+    width: 65px;
+    border-radius: 5px;
     margin-right: 1rem;
 `;
 
