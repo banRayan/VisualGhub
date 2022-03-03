@@ -2,6 +2,7 @@ export const colors = {
     primary: '#24292F',
 
     secondary100: '#5E6873',
+    secondary200: '#121026',
 };
 
 

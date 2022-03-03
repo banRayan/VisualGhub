@@ -108,11 +108,11 @@ export const CardCount = styled.div`
     width: 2.8rem;
     margin: 1rem 0; 
 
-    background-color:  rgb(255, 255, 255);
+    background-color:  #fff;
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.041);
 
-    font: 600 1rem 'Poppins', Arial, Helvetica, sans-serif;
-    color: #24292F;
+    font: ${fonts.text600};
+    color: ${colors.secondary200};
     border-radius: 5px;
     margin-right: 2rem;
 
@@ -123,27 +123,16 @@ export const CardCount = styled.div`
     position: relative;
 `;
 
-export const IconCard = styled.div`
-     height: 1.5rem;
-    width: 1.5rem;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.041);
-
-
-    position: absolute;
-    left: 75%;
-    top: 75%;    
-`;
 
 export const Link = styled.a`
-    font: 400 1rem 'Poppins', Arial, Helvetica, sans-serif;
+    font: ${fonts.text400};
     text-decoration: none;
     color: #fff;
+    cursor: pointer;
     
     &:hover{
     text-decoration: underline;
-    color: rgb(65, 65, 240);
+    color: ${colors.secondary200};
     transition: .2s;
 }
 `;

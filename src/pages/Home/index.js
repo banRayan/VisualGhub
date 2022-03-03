@@ -1,11 +1,12 @@
 import React, { useState, useEffect} from 'react';
-import { CardCount, Container, DataContainer, DescriptionContainer, Header, IconCard, InfosContainer, Link, Main, MenuContainer, ParamentContainer, RepoData, RepoDescription, RepoInformation, Title } from './styles'
+import { CardCount, Container, DataContainer, DescriptionContainer, Header, InfosContainer, Link, Main, MenuContainer, ParamentContainer, RepoData, RepoDescription, RepoInformation, Title } from './styles'
+import { useAuth } from '../../context/Auth';
 
 import Repositories from '../../components/Repositories';
 import User from '../../components/User';
 import Menu from '../../components/Menu';
 
-import { useAuth } from '../../context/Auth';
+import { FiLink2 } from "react-icons/fi";
 
 const Home = () =>{
     const { username } = useAuth();
@@ -51,7 +52,7 @@ const Home = () =>{
                 <RepoInformation>
                     <Title>Information</Title>
                     <InfosContainer>
-                        <Link href={repoData.html_url} rel="noreferrer" target="_blank" className='link'>👉 access the repository here 📁</Link>
+                        <Link href={repoData.html_url} rel="noreferrer" target="_blank"><h3><FiLink2/></h3>access the repository here</Link>
                     </InfosContainer>
                 </RepoInformation>
                 <RepoData>
@@ -59,15 +60,15 @@ const Home = () =>{
                     <ParamentContainer>
                             <CardCount>
                                 <p>{repoData.forks}</p>
-                                <IconCard></IconCard>
+                                
                             </CardCount>
                             <CardCount>
                                 <p>{repoData.watchers_count}</p>
-                                <IconCard></IconCard>
+                                
                             </CardCount>
                             <CardCount>
                                 <p>{repoData.stargazers_count}</p>
-                                <IconCard></IconCard>
+                                
                             </CardCount>
                     </ParamentContainer>
                 </RepoData>
