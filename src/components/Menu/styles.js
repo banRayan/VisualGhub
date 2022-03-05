@@ -2,15 +2,23 @@ import styled from "styled-components";
 import { colors, fonts } from '../../styles/themes/theme';
 
 export const Container = styled.div`
-    background-color: #fff;
-    border-radius: 5px;
+    width: 55px;
+    height: 100vh;
+
+    background-color: ${colors.secondary300};
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.041);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 15px;
 `;
 
 export const Header = styled.div`
-    height: 3.5rem;
-    width: 3.5rem;
-    border-radius: 8px;
+    height: 55px;
+    width: 55px;
 
     display: flex;
     flex-direction: column;
@@ -18,7 +26,7 @@ export const Header = styled.div`
     justify-content: center;
 
     font: 900 1.7rem ${fonts.mainFont};
-    color: ${colors.primary};
+    color: #fff;
     padding: .8rem;
     cursor: pointer;
 

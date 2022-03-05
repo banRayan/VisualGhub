@@ -3,6 +3,7 @@ export const colors = {
 
     secondary100: '#5E6873',
     secondary200: '#121026',
+    secondary300: '#424B55'
 };
 
 

@@ -3,13 +3,13 @@ import { colors } from '../../styles/themes/theme';
 
 export const Container = styled.button`
     width: 100%;
-    color: ${colors.primary};
-    font: 700 1.2rem 'Poppins', Arial, Helvetica, sans-serif;
+    color: ${colors.secondary200};
+    font: 600 1.2rem 'Poppins', Arial, Helvetica, sans-serif;
     text-decoration: none;
 
-    padding: 1.2rem 2rem;
+    padding: 19px 32px;
     border: none;
-    background-color: white;
+    background-color: #fff;
     text-align: left;
     cursor: pointer;
     transition: .3s;
@@ -37,6 +37,6 @@ export const Status = styled.div`
 
 export const Techs = styled.div`
     color: ${colors.secondary100};
-    font: 500 .9rem 'Poppins', Arial, Helvetica, sans-serif;
+    font: 600 .8rem 'Poppins', Arial, Helvetica, sans-serif;
     margin-top: .3rem;
 `;
