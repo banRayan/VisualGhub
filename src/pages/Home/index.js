@@ -34,6 +34,9 @@ const Home = () =>{
         <Container>
             <Menu/>
             <Repositories repositories={repositories} handleClickRepository={handleClickRepository}/>
+            <MenuContainer>
+                
+            </MenuContainer>
         </Container>
     )
 }
