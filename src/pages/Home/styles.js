@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, fonts } from '../../styles/themes/theme'
+import { colors } from '../../styles/themes/theme'
 
 export const Container = styled.div`
     width: 100vw;
@@ -8,6 +8,12 @@ export const Container = styled.div`
     background-color: ${colors.primary};
 
     display: flex;
+`;
+
+export const UserContainer = styled.div`
+    display: flex;
+    flex-direction: column ;
+    justify-content:center ;
 `;
 
 export const MainContainer = styled.main`

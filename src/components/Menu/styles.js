@@ -25,7 +25,7 @@ export const Header = styled.div`
     align-items: center;
     justify-content: center;
 
-    font: 900 1.7rem ${fonts.mainFont};
+    font: 900 1.5rem ${fonts.mainFont};
     color: #fff;
     padding: .8rem;
     cursor: pointer;

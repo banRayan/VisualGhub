@@ -1,8 +1,11 @@
 import styled from "styled-components";
-import { fonts } from '../../styles/themes/theme';
+import { colors, fonts } from '../../styles/themes/theme';
 
 export const Container = styled.div`
-    height: 3.5rem;
+    height: 128px;
+    background-color: ${colors.light};
+    margin-bottom: .1rem;
+    border-radius: 5px 5px 0 0;
 
     display: flex;
     flex-direction: row;
@@ -19,7 +22,7 @@ export const Picture = styled.img`
 `;
 
 export const UserContainer = styled.div`
-    color: white;
+    color: ${colors.secondary200};
 
     h1{
         font: 600 1.3rem 'Poppins', Arial, Helvetica, sans-serif;
