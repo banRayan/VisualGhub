@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { colors, fonts } from '../../styles/themes/theme';
 
 export const Container = styled.div`
-    width: 55px;
     height: 100vh;
 
     background-color: ${colors.secondary300};
@@ -12,8 +11,6 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    margin-right: 15px;
 `;
 
 export const Header = styled.div`

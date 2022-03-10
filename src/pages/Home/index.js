@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react';
-import { CardCount, Container, UserContainer,DataContainer, DescriptionContainer, Header, InfosContainer, Link, Main, MenuContainer, ParamentContainer, RepoData, RepoDescription, RepoInformation, Title } from './styles'
+import { CardCount, Container, UserContainer, DataContainer, DescriptionArea, DescriptionContainer, Description, Header, InfosContainer, Link, Main, MenuContainer, ParamentContainer, RepoData, RepoDescription, RepoInformation, Title, MainContainer, RightBar, InfoArea, InfoContainer } from './styles'
 import { useAuth } from '../../context/Auth';
 
 import Repositories from '../../components/Repositories';
@@ -37,7 +37,19 @@ const Home = () =>{
                 <User/>
                 <Repositories repositories={repositories} handleClickRepository={handleClickRepository}/>
             </UserContainer>
-            
+            <MainContainer>
+                <DescriptionArea>
+                    <DescriptionContainer>
+                        <Description>{repoData.description}</Description>
+                    </DescriptionContainer>
+                </DescriptionArea>
+                <InfoArea>
+                    <InfoContainer>
+                        <Title>{repoData.name}</Title>
+                    </InfoContainer>
+                </InfoArea>
+            </MainContainer>
+            <RightBar/>
         </Container>
     )
 }

@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         font-family: 'Poppins', Arial, Helvetica, sans-serif;
     }
+
 `;
 
 export default GlobalStyle;

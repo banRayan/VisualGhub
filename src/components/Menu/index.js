@@ -10,7 +10,7 @@ const Menu = () => {
     return (
         <Container>
             <Header>
-                <FiList/>
+                {/* <FiList/> */}
             </Header>
             <Link to={'/profile'}>
                 <Header>
