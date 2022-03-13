@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react';
-import { CardCount, Container, UserContainer, DataContainer, DescriptionArea, DescriptionContainer, Description, Header, InfosContainer, Link, Main, MenuContainer, ParamentContainer, RepoData, RepoDescription, RepoInformation, Title, MainContainer, RightBar, InfoArea, InfoContainer } from './styles'
+import { CardCount, Container, UserContainer, DataContainer,Text, LinkContainer, DescriptionArea, DescriptionContainer, Description, Header, InfosContainer, Link, Main, MenuContainer, ParamentContainer, RepoData, RepoDescription, RepoInformation, Title, MainContainer, RightBar, InfoArea, InfoContainer } from './styles'
 import { useAuth } from '../../context/Auth';
 
 import Repositories from '../../components/Repositories';
@@ -38,16 +38,22 @@ const Home = () =>{
                 <Repositories repositories={repositories} handleClickRepository={handleClickRepository}/>
             </UserContainer>
             <MainContainer>
+                <InfoArea>
+                    <InfoContainer>
+                        <Title>{repoData.name}</Title>
+                        <LinkContainer>
+                            <h3><FiLink2/></h3>
+                            <Link href={repoData.html_url} rel='external' target='_blank'>
+                                <Text>Click here to access the repository</Text>
+                            </Link>
+                        </LinkContainer>
+                    </InfoContainer>
+                </InfoArea>
                 <DescriptionArea>
                     <DescriptionContainer>
                         <Description>{repoData.description}</Description>
                     </DescriptionContainer>
                 </DescriptionArea>
-                <InfoArea>
-                    <InfoContainer>
-                        <Title>{repoData.name}</Title>
-                    </InfoContainer>
-                </InfoArea>
             </MainContainer>
             <RightBar/>
         </Container>

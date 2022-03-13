@@ -29,6 +29,56 @@ export const MainContainer = styled.main`
 
 `;
 
+export const InfoArea = styled.div`
+    grid-area: infoArea;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`;
+
+export const InfoContainer = styled.div`
+    width: 400px;
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+`;
+
+export const Title = styled.h1`
+    font: ${fonts.title700};
+    color: ${colors.light};
+    margin-bottom: 20px;
+`;
+
+export const LinkContainer = styled.div`
+    display: flex;
+    align-items: center;
+
+    h3{
+        display: flex;
+        align-items: center;
+        color: ${colors.light};
+    }
+`;
+
+export const Link = styled.a`
+    color: ${colors.secondary100};
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 10px;
+
+    &:hover{
+        text-decoration: underline;
+        color: ${colors.light}
+    }
+`;
+
+export const Text = styled.p`
+    font: ${fonts.text400};
+`;
+
 export const DescriptionArea = styled.div`
     grid-area: descriptionArea;
 
@@ -55,25 +105,6 @@ export const Description = styled.p`
 
     font: ${fonts.text400};
     color: ${colors.secondary200};
-`;
-
-export const Title = styled.h1`
-    font: ${fonts.title700};
-    color: ${colors.light};
-`;
-
-
-
-export const InfoArea = styled.div`
-    grid-area: infoArea;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-`;
-
-export const InfoContainer = styled.div`
 `;
 
 export const RightBar = styled.div`
