@@ -5,7 +5,7 @@ export const Container = styled.div`
     height: 128px;
     background-color: ${colors.light};
     margin-bottom: .1rem;
-    border-radius: 5px 5px 0 0;
+    border-radius: 0 5px 0 0;
 
     display: flex;
     flex-direction: row;

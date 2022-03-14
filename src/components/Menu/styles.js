@@ -3,8 +3,9 @@ import { colors, fonts } from '../../styles/themes/theme';
 
 export const Container = styled.div`
     height: 100vh;
+    width: 60px;
 
-    background-color: ${colors.secondary300};
+    background-color: ${colors.primary};
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.041);
 
     display: flex;

@@ -10,14 +10,6 @@ export const Container = styled.div`
     display: flex;
 `;
 
-export const UserContainer = styled.div`
-    display: flex;
-    flex-direction: column ;
-    justify-content:center ;
-
-    margin-left: 5px;
-`;
-
 export const MainContainer = styled.main`
     width: 100%;
     height: 100%;
@@ -26,6 +18,13 @@ export const MainContainer = styled.main`
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr 2fr;
     grid-template-areas: 'infoArea descriptionArea';
+
+`;
+
+export const UserContainer = styled.div`
+    display: flex;
+    flex-direction: column ;
+    justify-content:center ;
 
 `;
 

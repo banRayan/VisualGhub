@@ -9,9 +9,6 @@ import { Container, Header } from './styles';
 const Menu = () => {
     return (
         <Container>
-            <Header>
-                {/* <FiList/> */}
-            </Header>
             <Link to={'/profile'}>
                 <Header>
                     <FiUser />

@@ -6,7 +6,7 @@ export const Container = styled.ul`
     height: 100vh;
     background-color: ${colors.light};
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.041);
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 0;
     font: ${fonts.text400};
     display:flex;
     flex-direction: column;
