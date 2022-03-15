@@ -17,7 +17,8 @@ export const MainContainer = styled.main`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr 2fr;
-    grid-template-areas: 'infoArea descriptionArea';
+    grid-template-areas: 'infoArea descriptionArea'
+                            'counterArea .'   ;
 
 `;
 
@@ -110,4 +111,12 @@ export const RightBar = styled.div`
     width: 55px;
     height: 100vh;
     background-color: ${colors.secondary100} ;
+`;
+
+export const CounterArea = styled.div`
+    grid-area: counterArea;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;

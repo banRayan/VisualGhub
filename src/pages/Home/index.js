@@ -1,10 +1,11 @@
 import React, { useState, useEffect} from 'react';
-import { CardCount, Container, UserContainer, DataContainer,Text, LinkContainer, DescriptionArea, DescriptionContainer, Description, Header, InfosContainer, Link, Main, MenuContainer, ParamentContainer, RepoData, RepoDescription, RepoInformation, Title, MainContainer, RightBar, InfoArea, InfoContainer } from './styles'
+import { Container, UserContainer, DataContainer,Text, LinkContainer, DescriptionArea, DescriptionContainer, Description, Header, InfosContainer, Link, Main, MenuContainer, ParamentContainer, RepoData, RepoDescription, RepoInformation, Title, MainContainer, RightBar, InfoArea, InfoContainer, CounterArea } from './styles'
 import { useAuth } from '../../context/Auth';
 
 import Repositories from '../../components/Repositories';
 import User from '../../components/User';
 import Menu from '../../components/Menu';
+import CardCounter from '../../components/CardCounter';
 
 import { FiLink2 } from "react-icons/fi";
 
@@ -54,6 +55,11 @@ const Home = () =>{
                         <Description>{repoData.description}</Description>
                     </DescriptionContainer>
                 </DescriptionArea>
+                <CounterArea>
+                    <CardCounter>
+                        {repoData.forks_count}
+                    </CardCounter>
+                </CounterArea>
             </MainContainer>
             <RightBar/>
         </Container>
