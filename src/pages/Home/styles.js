@@ -113,10 +113,38 @@ export const RightBar = styled.div`
     background-color: ${colors.secondary100} ;
 `;
 
+//Card Area
+
 export const CounterArea = styled.div`
     grid-area: counterArea;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    h4{
+        display: flex;
+        align-items: center;
+        color: ${colors.secondary200};
+    }
+`;
+
+export const CountContainer = styled.div`
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: ${colors.light};
+    color: ${colors.secondary200};
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    margin-right: 20px;
+`;
+
+export const Count = styled.div`
+    font: ${fonts.text600};
+    color: ${colors.secondary100};
+
 `;

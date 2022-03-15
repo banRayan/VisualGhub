@@ -1,13 +1,12 @@
 import React, { useState, useEffect} from 'react';
-import { Container, UserContainer, DataContainer,Text, LinkContainer, DescriptionArea, DescriptionContainer, Description, Header, InfosContainer, Link, Main, MenuContainer, ParamentContainer, RepoData, RepoDescription, RepoInformation, Title, MainContainer, RightBar, InfoArea, InfoContainer, CounterArea } from './styles'
+import { Container, UserContainer, Text, LinkContainer, DescriptionArea, DescriptionContainer, Description,  Link, Title, MainContainer, RightBar, InfoArea, InfoContainer, CounterArea, CountContainer, Count} from './styles'
 import { useAuth } from '../../context/Auth';
 
 import Repositories from '../../components/Repositories';
 import User from '../../components/User';
 import Menu from '../../components/Menu';
-import CardCounter from '../../components/CardCounter';
 
-import { FiLink2 } from "react-icons/fi";
+import { FiLink2, FiShare2, FiStar, FiInfo } from "react-icons/fi";
 
 const Home = () =>{
     const { username } = useAuth();
@@ -56,9 +55,18 @@ const Home = () =>{
                     </DescriptionContainer>
                 </DescriptionArea>
                 <CounterArea>
-                    <CardCounter>
-                        {repoData.forks_count}
-                    </CardCounter>
+                    <CountContainer>
+                        <Count>{repoData.forks_count}</Count>
+                        <h4><FiShare2/></h4>
+                    </CountContainer>
+                    <CountContainer>
+                        <Count>{repoData.stargazers_count}</Count>
+                        <h4><FiStar/></h4>
+                    </CountContainer>
+                    <CountContainer>
+                        <Count>{repoData.open_issues_count}</Count>
+                        <h4><FiInfo/></h4>
+                    </CountContainer>
                 </CounterArea>
             </MainContainer>
             <RightBar/>
