@@ -108,9 +108,20 @@ export const Description = styled.p`
 `;
 
 export const RightBar = styled.div`
-    width: 55px;
+    width: 80px;
     height: 100vh;
-    background-color: ${colors.secondary100} ;
+    background-color: ${colors.primary} ;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    h2{
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        color: ${colors.light};
+    }
 `;
 
 //Card Area
@@ -145,6 +156,6 @@ export const CountContainer = styled.div`
 
 export const Count = styled.div`
     font: ${fonts.text600};
-    color: ${colors.secondary100};
-
+    color: ${colors.secondary200};
 `;
+

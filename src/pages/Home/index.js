@@ -6,12 +6,13 @@ import Repositories from '../../components/Repositories';
 import User from '../../components/User';
 import Menu from '../../components/Menu';
 
-import { FiLink2, FiShare2, FiStar, FiInfo } from "react-icons/fi";
+import { FiLink2, FiShare2, FiStar, FiInfo, FiMenu} from "react-icons/fi";
 
 const Home = () =>{
     const { username } = useAuth();
     const [repositories, setRepositories] = useState([]);
     const [ repoData, setRepoData ] = useState([]);
+    const [langs, setLangs] = useState([]);
     
     useEffect(()=> {
         const fetchData = async () =>{
@@ -22,14 +23,20 @@ const Home = () =>{
         fetchData();
     }, [username])
 
-
-    
     const handleClickRepository = ( id ) => {
-        const [ repo ] = repositories.filter( repo => repo.id === id);
+        const  [repo]  = repositories.filter( repo => repo.id === id);
         setRepoData(repo)
-        console.log(repoData)
     }
-    
+
+    useEffect(() => {
+        const fetchLangs = async () => {
+            const response = await fetch(`https://api.github.com/repos/${repoData.full_name}/languages`);
+            const data = await response.json();
+            setLangs(data);
+        }
+        fetchLangs()
+    }, [repoData])
+
     return (
         <Container>
             <Menu/>
@@ -69,7 +76,9 @@ const Home = () =>{
                     </CountContainer>
                 </CounterArea>
             </MainContainer>
-            <RightBar/>
+            <RightBar>
+                <h2><FiMenu/></h2>
+            </RightBar>
         </Container>
     )
 }
