@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react';
-import { Container, UserContainer, Text, LinkContainer, DescriptionArea, DescriptionContainer, Description,  Link, Title, MainContainer, RightBar, InfoArea, InfoContainer, CounterArea, CountContainer, Count} from './styles'
+import { Container, UserContainer, Text, LinkContainer, DescriptionArea, DescriptionContainer, Description,  Link, Title, MainContainer, RightBar, InfoArea, InfoContainer, CounterArea, CounterContainer, CountContainer, Count} from './styles'
 import { useAuth } from '../../context/Auth';
 
 import Repositories from '../../components/Repositories';
@@ -12,7 +12,6 @@ const Home = () =>{
     const { username } = useAuth();
     const [repositories, setRepositories] = useState([]);
     const [ repoData, setRepoData ] = useState([]);
-    const [langs, setLangs] = useState([]);
     
     useEffect(()=> {
         const fetchData = async () =>{
@@ -28,14 +27,6 @@ const Home = () =>{
         setRepoData(repo)
     }
 
-    useEffect(() => {
-        const fetchLangs = async () => {
-            const response = await fetch(`https://api.github.com/repos/${repoData.full_name}/languages`);
-            const data = await response.json();
-            setLangs(data);
-        }
-        fetchLangs()
-    }, [repoData])
 
     return (
         <Container>
@@ -62,18 +53,20 @@ const Home = () =>{
                     </DescriptionContainer>
                 </DescriptionArea>
                 <CounterArea>
-                    <CountContainer>
-                        <Count>{repoData.forks_count}</Count>
-                        <h4><FiShare2/></h4>
-                    </CountContainer>
-                    <CountContainer>
-                        <Count>{repoData.stargazers_count}</Count>
-                        <h4><FiStar/></h4>
-                    </CountContainer>
-                    <CountContainer>
-                        <Count>{repoData.open_issues_count}</Count>
-                        <h4><FiInfo/></h4>
-                    </CountContainer>
+                    <CounterContainer>
+                        <CountContainer>
+                            <Count>{repoData.forks_count}</Count>
+                            <h4><FiShare2/></h4>
+                        </CountContainer>
+                        <CountContainer>
+                            <Count>{repoData.stargazers_count}</Count>
+                            <h4><FiStar/></h4>
+                        </CountContainer>
+                        <CountContainer>
+                            <Count>{repoData.open_issues_count}</Count>
+                            <h4><FiInfo/></h4>
+                        </CountContainer>
+                    </CounterContainer>
                 </CounterArea>
             </MainContainer>
             <RightBar>

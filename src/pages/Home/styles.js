@@ -133,11 +133,21 @@ export const CounterArea = styled.div`
     align-items: center;
     justify-content: center;
 
+`;
+
+export const CounterContainer = styled.div`
+    width: 400px;
+    height: 200px;
+
+    display: flex;
+    align-items: center;
+
     h4{
         display: flex;
         align-items: center;
         color: ${colors.secondary200};
     }
+
 `;
 
 export const CountContainer = styled.div`
