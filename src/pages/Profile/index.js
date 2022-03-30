@@ -1,6 +1,6 @@
 import React from "react";
 import { useAuth } from "../../context/Auth";
-import { Container, ProfileContainer, CardProfile, UserContainer, Picture, Name, Bio, Follows, FollowsCount, SocialContainer, SocialCard, Link } from "./styles";
+import { Container, ProfileContainer, CardProfile, UserContainer, Picture, Name, Username, Bio, Follows, FollowsCount, SocialContainer, SocialCard, Link } from "./styles";
 
 import Menu from '../../components/Menu';
 import { FiTwitter, FiLink2, FiMapPin } from "react-icons/fi";
@@ -16,7 +16,11 @@ const Profile = () => {
                 <CardProfile>
                     <UserContainer>
                         <Picture src={data.avatar_url} alt="Imagem de perfil do usuário"></Picture>
-                        <Name>{data.name}</Name>
+                        <div>
+                            <Name>{data.name}</Name>
+                            <Username>{data.login}</Username>
+                        </div>
+                    </UserContainer>
                         <Bio>
                             <p>{data.bio}</p>
                         </Bio>
@@ -35,9 +39,7 @@ const Profile = () => {
                             <Link href={data.blog} rel='external' target='_blank'>
                                 <SocialCard><h2><FiLink2/></h2> Blog </SocialCard>
                             </Link>
-                                <SocialCard><h2><FiMapPin/></h2>{data.location}</SocialCard>
                         </SocialContainer>
-                    </UserContainer>
                 </CardProfile>
             </ProfileContainer>
         </Container>

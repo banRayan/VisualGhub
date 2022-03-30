@@ -32,30 +32,33 @@ export const CardProfile = styled.div`
 
     display: flex;
     flex-direction: column;
-    align-items: center;
 `;
 
 export const UserContainer = styled.div`
     width: 600px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items:center;
 `;
 
 export const Picture = styled.img`
     height: 120px;
     width: 120px;
     border-radius: 50%;
-    margin-bottom: 15px;
+    margin: 0 15px 15px 0;
 `;
 
 export const Name = styled.p`
     color: ${colors.light};
     font: 400 1.5rem 'Poppins';
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 `;
 
+export const Username = styled.p`
+    color: ${colors.primary};
+    font: ${fonts.text500};
+`;
 export const Bio = styled.div`
-    width: 400px;
     padding: 10px 10px 10px 0;
     border-radius: 5px;
 
@@ -83,8 +86,8 @@ export const FollowsCount = styled.div`
     align-items: center;
     
     p{
-        font: ${fonts.text400};
-        color: ${colors.light};
+        font: ${fonts.text500};
+        color: ${colors.primary};
         margin-left: 5px;
     }
 `;
@@ -112,8 +115,22 @@ export const SocialCard = styled.div`
         font-size: 1rem;
         margin-right: 5px;
     }
+
+    text-decoration: none;
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover{
+        background-color: ${colors.primary};
+    }
 `;
 
 export const Link = styled.a`
     text-decoration: none;
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover{
+        background-color: ${colors.secondary300};
+    }
 `;

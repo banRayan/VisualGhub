@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { FiList } from "react-icons/fi";
 import { FiUser } from "react-icons/fi"
 import { FiArchive } from "react-icons/fi"
 
@@ -14,9 +13,11 @@ const Menu = () => {
                     <FiUser />
                 </Header>
             </Link>
-            <Header>
-                <FiArchive />
-            </Header>
+            <Link to={'/home'}>
+                <Header>
+                    <FiArchive />
+                </Header>
+            </Link>
         </Container>
     )
 }
