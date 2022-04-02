@@ -1,12 +1,13 @@
 import React, { useState, useEffect} from 'react';
-import { Container, UserContainer, Text, LinkContainer, DescriptionArea, DescriptionContainer, Description,  Link, Title, MainContainer, RightBar, InfoArea, InfoContainer, CounterArea, CounterContainer, CountContainer, Count} from './styles'
+import { Container, UserContainer, Text, LinkContainer, DescriptionArea, DescriptionContainer, Description,  Link, Title, MainContainer, InfoArea, InfoContainer, CounterArea, CounterContainer, CountContainer, Count} from './styles'
 import { useAuth } from '../../context/Auth';
 
 import Repositories from '../../components/Repositories';
 import User from '../../components/User';
 import Menu from '../../components/Menu';
 
-import { FiLink2, FiShare2, FiStar, FiInfo, FiMenu} from "react-icons/fi";
+import { FiLink2, FiShare2, FiStar, FiInfo} from "react-icons/fi";
+import EndMenu from '../../components/EndMenu';
 
 const Home = () =>{
     const { username } = useAuth();
@@ -69,9 +70,7 @@ const Home = () =>{
                     </CounterContainer>
                 </CounterArea>
             </MainContainer>
-            <RightBar>
-                <h2><FiMenu/></h2>
-            </RightBar>
+            <EndMenu />
         </Container>
     )
 }

@@ -24,7 +24,6 @@ export const ProfileContainer = styled.div`
 `;
 
 export const CardProfile = styled.div`
-    height: 900px;
     width: 700px;
     background-color: ${colors.secondary300};
     border-radius: 5px;
@@ -55,9 +54,11 @@ export const Name = styled.p`
 `;
 
 export const Username = styled.p`
-    color: ${colors.primary};
+    color: #000;
     font: ${fonts.text500};
 `;
+
+
 export const Bio = styled.div`
     padding: 10px 10px 10px 0;
     border-radius: 5px;
@@ -87,7 +88,7 @@ export const FollowsCount = styled.div`
     
     p{
         font: ${fonts.text500};
-        color: ${colors.primary};
+        color: #000;
         margin-left: 5px;
     }
 `;
@@ -132,5 +133,14 @@ export const Link = styled.a`
 
     &:hover{
         background-color: ${colors.secondary300};
+    }
+`;
+
+export const Location = styled.div`
+    display: flex;
+    align-self: flex-end;
+
+    h4{
+        margin-right: 5px;
     }
 `;

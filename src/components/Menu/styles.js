@@ -6,8 +6,6 @@ export const Container = styled.div`
     width: 60px;
 
     background-color: ${colors.primary};
-    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.041);
-
     display: flex;
     flex-direction: column;
     align-items: center;
