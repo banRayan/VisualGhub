@@ -9,7 +9,29 @@ import EndMenu from "../../components/EndMenu";
 
 const Profile = () => {
     const { data } = useAuth();
+    
+    const NumberConversion = ( number ) => {
+        const StringNumber = String(number).split('');
+        const NumberLength = StringNumber.length;
 
+        switch (NumberLength) {
+            case 1:
+                return number;
+            case 2:
+                return number;
+            case 3:
+                return number;
+            case 4:
+                return (StringNumber[0] + 'k');
+            case 5:
+                return (StringNumber[0] + StringNumber[1] + 'k');
+            case 6:
+                return (StringNumber[0] + StringNumber[1] + StringNumber[2] +  'k');
+            default:
+                return (StringNumber[0] + 'm');
+        }
+    }
+    
     return(
         <Container>
             <Menu />
@@ -27,10 +49,10 @@ const Profile = () => {
                         </Bio>
                         <Follows>
                             <FollowsCount>
-                                {data.followers} <p>Followers</p>
+                                {NumberConversion(data.followers)} <p>Followers</p>
                             </FollowsCount>
                             <FollowsCount>
-                                {data.following} <p>Following</p>
+                                {NumberConversion(data.following)} <p>Following</p>
                             </FollowsCount>
                         </Follows>
                         <SocialContainer>

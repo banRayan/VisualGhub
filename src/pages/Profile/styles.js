@@ -5,7 +5,6 @@ export const Container = styled.div`
     height: 100vh;
     width: 100vw;
     background-color: ${colors.primary};
-    color: #fff;
     font-family: ${fonts.mainFont};
 
     display: flex;
@@ -25,7 +24,7 @@ export const ProfileContainer = styled.div`
 
 export const CardProfile = styled.div`
     width: 700px;
-    background-color: ${colors.secondary300};
+    background-color: ${colors.light};
     border-radius: 5px;
     padding: 50px;
 
@@ -48,7 +47,7 @@ export const Picture = styled.img`
 `;
 
 export const Name = styled.p`
-    color: ${colors.light};
+    color: ${colors.primary};
     font: 400 1.5rem 'Poppins';
     margin-bottom: 5px;
 `;
@@ -68,7 +67,7 @@ export const Bio = styled.div`
     margin-bottom: 30px;
 
     p{
-        color: ${colors.light};
+        color: ${colors.secondary300};
         font: ${fonts.text400};
     }
 `;
@@ -80,8 +79,9 @@ export const Follows = styled.div`
 `;
 
 export const FollowsCount = styled.div`
-    font-size: 1.1rem;
-    color: ${colors.light};
+    font-size: 1rem;
+    font-weight: 600;
+    color: ${colors.primary};
     display: flex;
     margin-right: 20px;
     align-items: center;
@@ -107,8 +107,8 @@ export const SocialCard = styled.div`
     background-color: ${colors.secondary100};
     color: ${colors.light};
     border-radius: 5px;
-    padding: 10px;
     margin-right: 10px;
+    padding: 10px;
 
     h2{
         display: flex;
@@ -130,10 +130,6 @@ export const Link = styled.a`
     text-decoration: none;
     cursor: pointer;
     transition: .2s;
-
-    &:hover{
-        background-color: ${colors.secondary300};
-    }
 `;
 
 export const Location = styled.div`
