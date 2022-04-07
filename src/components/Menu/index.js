@@ -1,13 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { FiUser } from "react-icons/fi"
-import { FiArchive } from "react-icons/fi"
+import { FiArchive, FiLogIn, FiUser } from "react-icons/fi"
 
-import { Container, Header } from './styles';
+import { Container, Header, Login } from './styles';
 
 const Menu = () => {
     return (
         <Container>
+            <Login>
+                <Link to={'/'}>
+                    <Header>
+                        <FiLogIn />
+                    </Header>
+                </Link>
+            </Login>
             <Link to={'/profile'}>
                 <Header>
                     <FiUser />
