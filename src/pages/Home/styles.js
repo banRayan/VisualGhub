@@ -10,23 +10,38 @@ export const Container = styled.div`
     display: flex;
 `;
 
-export const MainContainer = styled.main`
+export const MainContainer = styled.div`
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100%;
+`;
 
+export const PageContainer = styled.div`
+    display: flex;
+    padding: 50px;
+
+    width: 100%;
+    height: 100%;
+`;
+
+export const GridContainer = styled.main`
+    width: 100%;
+    height: 100%;
+    
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr 2fr;
-    grid-template-areas: 'infoArea descriptionArea'
-                            'counterArea .'   ;
-
-`;
+    grid-template-areas: 
+    'infoArea descriptionArea'
+    'counterArea .'   ;
+    
+    `;
 
 export const UserContainer = styled.div`
     display: flex;
     flex-direction: column ;
-    justify-content:center ;
-
+    justify-content:flex-start ;
 `;
 
 export const InfoArea = styled.div`
@@ -35,7 +50,7 @@ export const InfoArea = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 `;
 
 export const InfoContainer = styled.div`
@@ -85,7 +100,7 @@ export const DescriptionArea = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 
 `;
 
