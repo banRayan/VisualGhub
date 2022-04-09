@@ -15,4 +15,5 @@ export const fonts = {
     text600: '600 1rem Poppins',
     text500: '500 1rem Poppins',
     text400: '400 1rem Poppins',
+    fontLogo: '500 1.3rem Poppins',
 }
