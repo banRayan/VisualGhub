@@ -16,17 +16,17 @@ ____
 
 ## Sobre 
 
-<p>Minha ideia foi sintetizar em um único projeto os principais conceitos e recursos utilizados atualmente no mercado tecnológico, aplicando e testando meus conhecimentos na biblioteca e seus recursos, assim me desafiando a aprender enquanto pratico. </p>
+<p>Minha ideia foi sintetizar em um único projeto os principais conceitos e recursos utilizados atualmente no mercado tecnológico, aplicando e testando meus conhecimentos na biblioteca, assim me desafiando a aprender enquanto pratico. </p>
 
-<p>O projeto se trata de uma apresentação remodelada dos dados de usuários do GitHub, onde através apenas do nome de usuário, o site consome informações do mesmo como: lista de repositórios, títulos, descrições e resultados dos projetos diretamente da API do GitHub e os apresenta de uma nova forma.</p>
+<p>O projeto se trata de uma apresentação remodelada dos dados de usuários do GitHub, onde através do nome de usuário, o site consome informações do mesmo, como: lista de repositórios, títulos, descrições e resultados dos projetos diretamente da API do GitHub e os apresenta de uma nova forma.</p>
 
-<p>O Visual Ghub não é um projeto de inovação tecnológica tendo em vista que existem inúmeros sites semelhantes no ar, no entendo, como foi dito anteriormente o principal objetivo do projeto é pôr em prática meus conhecimentos técnicos dos recursos oferecidos pela biblioteca.</p>
+<p>O Visual Ghub não é um projeto de inovação tecnológica tendo em vista que existem inúmeros sites semelhantes no ar, no entanto, como foi dito anteriormente o principal objetivo do projeto é pôr em prática meus conhecimentos técnicos dos recursos oferecidos pela biblioteca.</p>
 
 ## Features
 
-* Obtem informações do usuário por meio do username da conta do GitHub.
+* Obtém informações do usuário através de qualquer username registrado no <a href="https://github.com">GitHub</a>.
 * Exibe lista de repositórios do usuário, títulos e descrições de projetos públicos.
-* Exibe informações do perfil do usuário: avatar, bio, blog, twitter, localização.
+* Exibe informações do perfil do usuário: avatar, bio, blog, twitter e localização.
 * Fornece links de direcionamento para projetos e redes sociais.
 
 ## Tecnologias
@@ -38,11 +38,14 @@ ____
 * Axios - HTTP Client
 * React Icons - ícones
 
-<p></p>
+## Extras
+
+* A maior parte do projeto está configurada no idioma inglês, isso porque ainda estou no processo de aprendizagem do mesmo e acredito que esse maior contato me motive a aprender enquanto estou praticando.
+* Assim como os códigos, também desenvolvi os layouts.
 
 ## Requisitos
 
-<p>Node</p>
+<a href="https://nodejs.org/en/">Node</a>
 
 
 
