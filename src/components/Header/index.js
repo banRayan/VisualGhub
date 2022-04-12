@@ -4,7 +4,7 @@ import { Container, Title } from './styles';
 const Header = () => {
     return (
         <Container>
-            <Title>Visualgit</Title>
+            <Title>Visual Ghub</Title>
         </Container>
     )
 }

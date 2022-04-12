@@ -50,6 +50,11 @@ export const Name = styled.p`
     color: ${colors.primary};
     font: 400 1.5rem 'Poppins';
     margin-bottom: 5px;
+
+    &:hover{
+        text-decoration: underline;
+        color: ${colors.secondary200};
+    }
 `;
 
 export const Username = styled.p`
@@ -130,6 +135,8 @@ export const Link = styled.a`
     text-decoration: none;
     cursor: pointer;
     transition: .2s;
+    
+    
 `;
 
 export const Location = styled.div`
@@ -139,4 +146,13 @@ export const Location = styled.div`
     h4{
         margin-right: 5px;
     }
+`;
+
+export const ScoresContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+export const Score = styled.img`
+    margin: 0 0 10px 50px;
 `;

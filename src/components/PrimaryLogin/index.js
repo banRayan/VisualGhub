@@ -35,7 +35,7 @@ export const PrimaryLogin = () => {
                 <Title>Enter your Github<br/> username</Title>
                 <Description>With your username we can access your gitHub data</Description>
             </Heading>
-            <Logo>VisualGit</Logo>
+            <Logo>Visual Ghub</Logo>
         </HeadingContainer>
         <InputContainer>
             <InputField>
