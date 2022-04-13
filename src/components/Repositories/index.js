@@ -1,13 +1,19 @@
 import React from 'react';
 
-import { Container, List } from './styles';
+import { 
+    Container,
+    List
+} from './styles';
+
 import Repository from '../Repository';
-// import './styles.css'
+import User from '../User';
 
 const Repositories = ({repositories, handleClickRepository}) =>{
     return (
         <>
+                <User/>
                 <Container>
+
                     {
                         repositories.map(repo => (
                         <List key={repo.id}>

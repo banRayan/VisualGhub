@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { colors, fonts } from '../../styles/themes/theme';
 
 export const Container = styled.div`
-    height: 100vh;
+    height: 100%;
     width: 60px;
 
     background-color: ${colors.primary};
@@ -31,4 +31,8 @@ export const Header = styled.div`
         transition: .3s;
         color: #fff;
     }
+`;
+
+export const Login = styled.div`
+    
 `;

@@ -1,6 +1,11 @@
 import React from 'react';
 import { useAuth } from '../../context/Auth';
-import { Container, Picture, UserContainer } from './styles';
+
+import {
+    Container,
+    Picture,
+    UserContainer
+} from './styles';
 
 const User = () => {
     const { data } = useAuth();

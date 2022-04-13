@@ -10,23 +10,38 @@ export const Container = styled.div`
     display: flex;
 `;
 
-export const MainContainer = styled.main`
+export const MainContainer = styled.div`
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100%;
+`;
 
+export const PageContainer = styled.div`
+    display: flex;
+    padding: 50px;
+
+    width: 100%;
+    height: 100%;
+`;
+
+export const GridContainer = styled.main`
+    width: 100%;
+    height: 100%;
+    
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr 2fr;
-    grid-template-areas: 'infoArea descriptionArea'
-                            'counterArea .'   ;
-
-`;
+    grid-template-areas: 
+    'infoArea descriptionArea'
+    'counterArea .'   ;
+    
+    `;
 
 export const UserContainer = styled.div`
     display: flex;
     flex-direction: column ;
-    justify-content:center ;
-
+    justify-content:flex-start ;
 `;
 
 export const InfoArea = styled.div`
@@ -35,7 +50,7 @@ export const InfoArea = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 `;
 
 export const InfoContainer = styled.div`
@@ -85,7 +100,7 @@ export const DescriptionArea = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 
 `;
 
@@ -169,3 +184,38 @@ export const Count = styled.div`
     color: ${colors.secondary200};
 `;
 
+//deal with lack of information
+
+export const NoClickContainer = styled.div`
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+`;
+
+export const NoClick = styled.div`
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+
+    border: 1px solid ${colors.light};
+    border-radius: 5px;
+
+    p{
+        color: ${colors.light};
+        font: ${fonts.text400};
+    }
+`;
+
+export const NoDescription = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p{
+        color: ${colors.secondary200};
+        font: ${fonts.text400};
+    }
+`;

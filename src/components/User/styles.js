@@ -4,8 +4,7 @@ import { colors, fonts } from '../../styles/themes/theme';
 export const Container = styled.div`
     height: 128px;
     background-color: ${colors.light};
-    margin-bottom: .1rem;
-    border-radius: 0 5px 0 0;
+    border-radius: 5px 5px 0 0;
 
     display: flex;
     flex-direction: row;
@@ -17,7 +16,7 @@ export const Container = styled.div`
 export const Picture = styled.img`
     height: 65px;
     width: 65px;
-    border-radius: 5px;
+    border-radius: 50%;
     margin-right: 1rem;
 `;
 

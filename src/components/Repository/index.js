@@ -1,5 +1,11 @@
 import React from 'react';
-import { Container, Status, StatusContainer, Techs } from './styles';
+
+import {
+    Container,
+    Status,
+    StatusContainer,
+    Techs
+} from './styles';
 
 const Repository = ({repo, handleClickRepository}) => {
     const getRepositoryStatus = () =>{

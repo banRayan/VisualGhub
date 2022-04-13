@@ -1,9 +1,26 @@
 import React, { useState } from 'react';
-import { Title, Container, HeadingContainer, Heading, Description, Logo, InputContainer, InputField, Input, ButtonContainer, Icon, Button, Paragraph, Link } from './styles';
 
-import { FiGithub } from "react-icons/fi";
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/Auth';
+
+import { 
+  Title,
+  Container,
+  HeadingContainer,
+  Heading,
+  Description,
+  Logo,
+  InputContainer,
+  InputField,
+  Input,
+  ButtonContainer,
+  Icon,
+  Button,
+  Paragraph,
+  Link
+} from './styles';
+
+import { FiGithub } from "react-icons/fi";
 
 export const PrimaryLogin = () => {
   const [inputUsername, setInputUsername] = useState([]);
@@ -35,7 +52,7 @@ export const PrimaryLogin = () => {
                 <Title>Enter your Github<br/> username</Title>
                 <Description>With your username we can access your gitHub data</Description>
             </Heading>
-            <Logo>VisualGit</Logo>
+            <Logo>Visual Ghub</Logo>
         </HeadingContainer>
         <InputContainer>
             <InputField>

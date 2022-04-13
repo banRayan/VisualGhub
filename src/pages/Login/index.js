@@ -1,6 +1,9 @@
 import React from 'react';
+import { 
+  Container
+} from './styles';
+
 import { PrimaryLogin } from '../../components/PrimaryLogin';
-import { Container } from './styles';
 
 const Login = () => {
   return (

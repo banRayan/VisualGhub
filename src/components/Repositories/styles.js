@@ -3,10 +3,10 @@ import { colors, fonts } from '../../styles/themes/theme';
 
 export const Container = styled.ul`
     width: 500px;
-    height: 100vh;
+    max-height: 600px;
     background-color: ${colors.light};
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.041);
-    border-radius: 0 0 5px 0;
+    border-radius: 0 0 5px 5px;
     font: ${fonts.text400};
     display:flex;
     flex-direction: column;
