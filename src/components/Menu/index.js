@@ -1,8 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { FiArchive, FiLogIn, FiUser } from "react-icons/fi"
 
-import { Container, Header, Login } from './styles';
+import { 
+    Container,
+    Header,
+    Login
+} from './styles';
+
+import { FiArchive, FiLogIn, FiUser } from "react-icons/fi"
 
 const Menu = () => {
     return (

@@ -200,6 +200,9 @@ export const NoClick = styled.div`
     flex-direction: column;
     padding: 5rem;
 
+    border: 1px solid ${colors.light};
+    border-radius: 5px;
+
     p{
         color: ${colors.light};
         font: ${fonts.text400};

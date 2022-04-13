@@ -1,9 +1,12 @@
 import React from 'react';
 
-import { Container, List } from './styles';
+import { 
+    Container,
+    List
+} from './styles';
+
 import Repository from '../Repository';
 import User from '../User';
-// import './styles.css'
 
 const Repositories = ({repositories, handleClickRepository}) =>{
     return (

@@ -1,13 +1,35 @@
 import React, { useState, useEffect} from 'react';
-import { Container, UserContainer, MainContainer, PageContainer, Text, LinkContainer, DescriptionArea, DescriptionContainer, Description,  Link, Title, GridContainer, InfoArea, InfoContainer, CounterArea, CounterContainer, CountContainer, Count, NoClick, NoClickContainer, NoDescription} from './styles'
 import { useAuth } from '../../context/Auth';
 
+import { 
+    Container,
+    UserContainer,
+    MainContainer,
+    PageContainer,
+    Text, LinkContainer,
+    DescriptionArea,
+    DescriptionContainer,
+    Description,
+    Link,
+    Title,
+    GridContainer,
+    InfoArea,
+    InfoContainer,
+    CounterArea,
+    CounterContainer,
+    CountContainer,
+    Count,
+    NoClick, 
+    NoClickContainer,
+    NoDescription
+} from './styles'
+    
 import Repositories from '../../components/Repositories';
+import EndMenu from '../../components/EndMenu';
+import Header from '../../components/Header';
 import Menu from '../../components/Menu';
 
 import { FiLink2, FiShare2, FiStar, FiInfo} from "react-icons/fi";
-import EndMenu from '../../components/EndMenu';
-import Header from '../../components/Header';
 
 const Home = () =>{
     const { username } = useAuth();
@@ -28,7 +50,6 @@ const Home = () =>{
         setRepoData(repo)
     }
 
-    console.log(repoData)
     return (
         <Container>
             <Menu/>
@@ -40,8 +61,8 @@ const Home = () =>{
                         ?
                         <NoClickContainer>
                             <NoClick>
-                                <p>* Click em algum item da lista de repositorio</p>
-                                <p>* Role o scroll do mouse para ter acesso a todos os itens</p>
+                                <p>! Click on any item in the repository list</p>
+                                <p>! Scroll to get access to non-visible repositories</p>
                             </NoClick>
                                 <UserContainer>
                                     <Repositories repositories={repositories} handleClickRepository={handleClickRepository}/>
@@ -63,9 +84,10 @@ const Home = () =>{
                         </InfoArea>
                         <DescriptionArea>
                             <DescriptionContainer>
-                                {   repoData.description === null | repoData.description === "" ?
+                                {   repoData.description === null | repoData.description === "" 
+                                    ?
                                     <NoDescription>
-                                        <p>Não há descrição</p>
+                                        <p>No description</p>
                                     </NoDescription>
                                     :
                                     <Description>{repoData.description}</Description>

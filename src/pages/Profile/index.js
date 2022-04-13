@@ -1,11 +1,29 @@
 import React from "react";
 import { useAuth } from "../../context/Auth";
-import { Container, ProfileContainer, CardProfile, UserContainer, Picture, Name,  Username, Location, Bio, Follows, FollowsCount, SocialContainer, SocialCard, Link, ScoresContainer, Score } from "./styles";
 
-import Menu from '../../components/Menu';
-import { FiTwitter, FiLink2, FiMapPin } from "react-icons/fi";
+import { 
+    Container,
+    ProfileContainer,
+    CardProfile,
+    UserContainer,
+    Picture,
+    Name,
+    Username,
+    Location,
+    Bio,
+    Follows,
+    FollowsCount,
+    SocialContainer,
+    SocialCard,
+    Link,
+    ScoresContainer,
+    Score
+} from "./styles";
+
 import EndMenu from "../../components/EndMenu";
+import Menu from '../../components/Menu';
 
+import { FiTwitter, FiLink2, FiMapPin } from "react-icons/fi";
 
 const Profile = () => {
     const { data } = useAuth();
@@ -39,8 +57,6 @@ const Profile = () => {
             return true
         }
     }
-    console.log(data)
-
     
     return(
         <Container>

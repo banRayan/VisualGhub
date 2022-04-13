@@ -1,9 +1,26 @@
 import React, { useState } from 'react';
-import { Title, Container, HeadingContainer, Heading, Description, Logo, InputContainer, InputField, Input, ButtonContainer, Icon, Button, Paragraph, Link } from './styles';
 
-import { FiGithub } from "react-icons/fi";
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/Auth';
+
+import { 
+  Title,
+  Container,
+  HeadingContainer,
+  Heading,
+  Description,
+  Logo,
+  InputContainer,
+  InputField,
+  Input,
+  ButtonContainer,
+  Icon,
+  Button,
+  Paragraph,
+  Link
+} from './styles';
+
+import { FiGithub } from "react-icons/fi";
 
 export const PrimaryLogin = () => {
   const [inputUsername, setInputUsername] = useState([]);

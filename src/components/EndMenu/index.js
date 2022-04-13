@@ -1,5 +1,9 @@
 import React from 'react';
-import { Container, Item } from './styles';
+
+import { 
+    Container,
+    Item 
+} from './styles';
 import { FiMenu} from "react-icons/fi";
 
 const EndMenu = () => {
