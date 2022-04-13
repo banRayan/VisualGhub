@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react';
-import { Container, UserContainer, MainContainer, PageContainer, Text, LinkContainer, DescriptionArea, DescriptionContainer, Description,  Link, Title, GridContainer, InfoArea, InfoContainer, CounterArea, CounterContainer, CountContainer, Count} from './styles'
+import { Container, UserContainer, MainContainer, PageContainer, Text, LinkContainer, DescriptionArea, DescriptionContainer, Description,  Link, Title, GridContainer, InfoArea, InfoContainer, CounterArea, CounterContainer, CountContainer, Count, NoClick, NoClickContainer, NoDescription} from './styles'
 import { useAuth } from '../../context/Auth';
 
 import Repositories from '../../components/Repositories';
@@ -28,14 +28,28 @@ const Home = () =>{
         setRepoData(repo)
     }
 
-
+    console.log(repoData)
     return (
         <Container>
             <Menu/>
             <MainContainer>
                 <Header/>
                 <PageContainer>
-                    <GridContainer>
+                    {
+                        repoData.length === 0 
+                        ?
+                        <NoClickContainer>
+                            <NoClick>
+                                <p>* Click em algum item da lista de repositorio</p>
+                                <p>* Role o scroll do mouse para ter acesso a todos os itens</p>
+                            </NoClick>
+                                <UserContainer>
+                                    <Repositories repositories={repositories} handleClickRepository={handleClickRepository}/>
+                                </UserContainer>
+                        </NoClickContainer>
+                        :
+                        <>
+                        <GridContainer>
                         <InfoArea>
                             <InfoContainer>
                                 <Title>{repoData.name}</Title>
@@ -49,7 +63,13 @@ const Home = () =>{
                         </InfoArea>
                         <DescriptionArea>
                             <DescriptionContainer>
-                                <Description>{repoData.description}</Description>
+                                {   repoData.description === null | repoData.description === "" ?
+                                    <NoDescription>
+                                        <p>Não há descrição</p>
+                                    </NoDescription>
+                                    :
+                                    <Description>{repoData.description}</Description>
+                                }
                             </DescriptionContainer>
                         </DescriptionArea>
                         <CounterArea>
@@ -72,6 +92,9 @@ const Home = () =>{
                     <UserContainer>
                         <Repositories repositories={repositories} handleClickRepository={handleClickRepository}/>
                     </UserContainer>
+                    </>
+                    }
+                    
                 </PageContainer>
             </MainContainer>
             <EndMenu />

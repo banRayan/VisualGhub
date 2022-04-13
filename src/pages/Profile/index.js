@@ -94,8 +94,8 @@ const Profile = () => {
                         </SocialContainer>
                 </CardProfile>
                 <ScoresContainer>
-                    <Score width="380em" alt="Github Status " src={`https://github-readme-stats.vercel.app/api?username=${data.login}&show_icons=true`} />
-                    <Score width="380em" alt="Most used languages" src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${data.login}&layout=compact`}/>
+                    <Score width="380em" alt="Github Status " src={`https://github-readme-stats.vercel.app/api?username=${data.login}&show_icons=true&theme=default`} />
+                    <Score width="380em" alt="Most used languages" src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${data.login}&layout=compact&theme=default`}/>
                 </ScoresContainer>
             </ProfileContainer>
             <EndMenu/>

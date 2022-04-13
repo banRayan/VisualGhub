@@ -184,3 +184,35 @@ export const Count = styled.div`
     color: ${colors.secondary200};
 `;
 
+//deal with lack of information
+
+export const NoClickContainer = styled.div`
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+`;
+
+export const NoClick = styled.div`
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+
+    p{
+        color: ${colors.light};
+        font: ${fonts.text400};
+    }
+`;
+
+export const NoDescription = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p{
+        color: ${colors.secondary200};
+        font: ${fonts.text400};
+    }
+`;
