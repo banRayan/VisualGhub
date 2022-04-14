@@ -111,8 +111,11 @@ export const DescriptionContainer = styled.div`
     background-color: ${colors.light} ;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    position: relative;
 `;
 
 export const Description = styled.p`
@@ -121,6 +124,7 @@ export const Description = styled.p`
     font: ${fonts.text400};
     color: ${colors.secondary200};
 `;
+
 
 export const RightBar = styled.div`
     width: 80px;

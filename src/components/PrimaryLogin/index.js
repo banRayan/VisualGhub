@@ -34,21 +34,24 @@ export const PrimaryLogin = () => {
 
   const handleLoginButtonClick = () => {
     try{
-      if (inputUsername === '') {
-        alert('insira um nome')
+      if (inputUsername === '' | inputUsername.length === 0) {
+        //const inputField = document.querySelector('.Heading')
+        //inputField.innerHTML = '* Obrigatório inserir um nome de usuário'
+        alert('insira um nome de usuário')
+        
       }else{
         setUsername(inputUsername)
         navigate('/home')
       }
     }catch(error){
-      alert(error.mesage)
+      console.error('error')
     }
   }
 
   return (
     <Container>
         <HeadingContainer>
-            <Heading>
+            <Heading className='Heading'>
                 <Title>Enter your Github<br/> username</Title>
                 <Description>With your username we can access your gitHub data</Description>
             </Heading>
@@ -59,7 +62,6 @@ export const PrimaryLogin = () => {
               <Icon><FiGithub/></Icon>
               <Input 
                 type='text'
-                className='input'
                 placeholder='username'
                 onChange={handleInputChange}
                 value={inputUsername}
@@ -70,7 +72,7 @@ export const PrimaryLogin = () => {
           <Button
             onClick={handleLoginButtonClick}
           >Access</Button>
-          <Paragraph>Don't have an account?<br/><Link target="_blank" rel="noreferrer" href="https://github.com/">Register Github</Link></Paragraph>
+          <Paragraph>Don't have an account?<br/><Link target="_blank" rel="noreferrer" href="https://github.com">Register Github</Link></Paragraph>
         </ButtonContainer>
     </Container>
   )

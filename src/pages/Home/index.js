@@ -21,7 +21,7 @@ import {
     Count,
     NoClick, 
     NoClickContainer,
-    NoDescription
+    NoDescription,
 } from './styles'
     
 import Repositories from '../../components/Repositories';
