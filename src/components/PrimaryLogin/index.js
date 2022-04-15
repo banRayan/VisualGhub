@@ -48,6 +48,12 @@ export const PrimaryLogin = () => {
     }
   }
 
+  const handleKeyDown = (event) => {
+    if(event.key === 'Enter'){
+      handleLoginButtonClick()
+    }
+  }
+
   return (
     <Container>
         <HeadingContainer>
@@ -65,6 +71,7 @@ export const PrimaryLogin = () => {
                 placeholder='username'
                 onChange={handleInputChange}
                 value={inputUsername}
+                onKeyDown={handleKeyDown}
               ></Input>
             </InputField>
         </InputContainer>
