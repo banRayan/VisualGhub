@@ -41,7 +41,7 @@ export const GridContainer = styled.main`
 export const UserContainer = styled.div`
     display: flex;
     flex-direction: column ;
-    justify-content:flex-start ;
+    justify-content: flex-start;
 `;
 
 export const InfoArea = styled.div`

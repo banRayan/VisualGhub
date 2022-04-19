@@ -24,13 +24,13 @@ import {
     NoDescription,
 } from './styles'
     
+import ErrorBoundary from '../../components/ErrorBoundary';
 import Repositories from '../../components/Repositories';
 import EndMenu from '../../components/EndMenu';
 import Header from '../../components/Header';
 import Menu from '../../components/Menu';
 
 import { FiLink2, FiShare2, FiStar, FiInfo} from "react-icons/fi";
-import ErrorBoundary from '../../components/Error';
 
 const Home = () =>{
     const { username } = useAuth();
