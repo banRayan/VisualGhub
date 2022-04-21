@@ -31,6 +31,7 @@ import Header from '../../components/Header';
 import Menu from '../../components/Menu';
 
 import { FiLink2, FiShare2, FiStar, FiInfo} from "react-icons/fi";
+import Warn from '../../components/Warn';
 
 const Home = () =>{
     const { username } = useAuth();
@@ -62,10 +63,7 @@ const Home = () =>{
                             repoData.length === 0 
                             ?
                             <NoClickContainer>
-                                <NoClick>
-                                    <p>! Click on any item in the repository list</p>
-                                    <p>! Scroll to get access to non-visible repositories</p>
-                                </NoClick>
+                                    <Warn>Click on any item in the repository list</Warn>
                                     <UserContainer>
                                         <Repositories repositories={repositories} handleClickRepository={handleClickRepository}/>
                                     </UserContainer>
