@@ -202,9 +202,7 @@ export const NoClickContainer = styled.div`
 export const NoClick = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 5rem;
 
-    border: 1px solid ${colors.light};
     border-radius: 5px;
 
     p{

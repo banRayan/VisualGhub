@@ -8,6 +8,7 @@ export const Container = styled.div`
     color: ${colors.light};
     border-radius: 5px;
     box-shadow: 5px 4px  12px rgba(0, 0, 0, 0.25);
+    margin-bottom: 22px;
 
     display: flex;
     align-items: center;

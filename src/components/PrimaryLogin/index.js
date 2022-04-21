@@ -41,7 +41,7 @@ export const PrimaryLogin = () => {
         
       }else{
         setUsername(inputUsername)
-        navigate('/home')
+        navigate('/homePage')
       }
     }catch(error){
       console.error('error')

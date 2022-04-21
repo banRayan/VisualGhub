@@ -63,7 +63,10 @@ const Home = () =>{
                             repoData.length === 0 
                             ?
                             <NoClickContainer>
-                                    <Warn>Click on any item in the repository list</Warn>
+                                    <NoClick>
+                                        <Warn>Click on any item in the repository list</Warn>
+                                        <Warn>Scroll to get access to non-visebles itens</Warn>
+                                    </NoClick>
                                     <UserContainer>
                                         <Repositories repositories={repositories} handleClickRepository={handleClickRepository}/>
                                     </UserContainer>
