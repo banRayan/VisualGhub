@@ -14,6 +14,9 @@ export const COLORS = {
     PRIMARY_800: '#171F29',
     PRIMARY_700: '#424B55',
     PRIMARY_600: '#5E6873',
+   
+    OVERLAY: 'rgba(94, 104, 115, 0.50)',
+    SHADOW: '5px 4px 12px rgba(0, 0, 0, 0.25)',
 
     TEXT_PRIMARY: '#FFF',
     TEXT_SECONDARY: '#080808',

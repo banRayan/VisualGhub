@@ -1,8 +1,16 @@
 import React from 'react';
+import { Container } from './styles';
+// import Settings from '../../components/Settings';
+//import Warn from '../../components/Warn';
+// import Men from '../../components/Men';
+// import Use from '../../components/Use';
+
+
 
 const HomePage = () => {
     return(
-        <h1>Home page</h1>
+        <Container>
+        </Container>
     )
 }
 
