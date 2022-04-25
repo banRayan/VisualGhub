@@ -43,4 +43,7 @@ export const FONTS = {
     TEXT_600: '600 1rem',
     TEXT_500: '500 1rem',
     TEXT_400: '400 1rem',
+
+    TEXT_MEDIUM_700: '700 1.2rem',
+    TEXT_MEDIUM_600: '600 1.2rem',
 }

@@ -2,23 +2,26 @@ import styled from 'styled-components';
 import { COLORS } from '../../styles/themes/theme';
 
 export const Container = styled.div`
-    width: 220px;
+    height: 100%;
     border-radius: 5px;
+    /* background-color: ${COLORS.OVERLAY}; */
 
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 `;
 
 export const Bar = styled.div`
-    width: 70px;
+    width: 60px;
     background-color: rgba(94, 104, 115, 0.50);
     border-radius: 5px;
-    box-shadow: ${COLORS.SHADOW};
+    /* box-shadow: ${COLORS.SHADOW}; */
 `;
 
 export const BoxItem = styled.div`
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     
     display: flex;
     align-items: center;
@@ -33,7 +36,7 @@ export const BoxItem = styled.div`
     }
     `;
 
-export const Item = styled.h1`
+export const Item = styled.h2`
     color: ${COLORS.TEXT_PRIMARY};
 
     display: flex;

@@ -3,11 +3,12 @@ import { Bar, BoxItem, Container, Item } from './styles';
 import { FiMenu, FiUser, FiLayers } from "react-icons/fi";
 import { Link } from 'react-router-dom';
 
+import Settings from '../Settings';
+
 const Men = () => {
     return(
         <Container>
             <Bar>
-                
                 <BoxItem>
                     <Item><FiMenu/></Item>
                 </BoxItem>
@@ -23,6 +24,7 @@ const Men = () => {
                 </Link>
 
             </Bar>
+            <Settings/>
         </Container>
     )
 }

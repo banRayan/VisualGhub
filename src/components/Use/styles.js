@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import { COLORS, FONTS } from '../../styles/themes/theme';
 
 export const Container = styled.div`
-    width: 345px;
-    height: 80px;
+    width: 305px;
+    height: 60px;
     background-color: ${COLORS.OVERLAY};
     border-radius: 5px;
 
@@ -12,8 +12,8 @@ export const Container = styled.div`
 `;
 
 export const BoxAvatar = styled.div`
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     background-color: ${COLORS.OVERLAY};
     border-radius: 5px;
 
@@ -23,14 +23,14 @@ export const BoxAvatar = styled.div`
 `;
 
 export const Avatar = styled.img`
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
 `;
 
 export const UserContainer = styled.div`
     width: 265px;
-    height: 80px;
+    height: 60px;
 
     display: flex;
     align-items: center;
@@ -45,7 +45,7 @@ export const Name = styled.p`
 
 export const BoxIcon = styled.div`
     width: 60px;
-    height: 80px;
+    height: 60px;
 
     display: flex;
     align-items: center;
