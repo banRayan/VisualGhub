@@ -4,8 +4,10 @@ import { COLORS } from '../../styles/themes/theme';
 export const Container = styled.div`
     background-color: ${COLORS.TEXT_PRIMARY};
     width: 500px;
+    min-height: 425px;
     max-height: 600px;
     border-radius: 5px;
+    box-shadow: ${COLORS.SHADOW};
 
     display: flex;
     flex-direction: column ;

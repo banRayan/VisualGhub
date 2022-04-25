@@ -2,6 +2,12 @@ import styled from 'styled-components';
 import { COLORS, FONTS } from '../../styles/themes/theme';
 
 export const Container = styled.div`
+    height: 100%;
+
+    display: flex;
+`;
+
+export const UserBar = styled.div`
     width: 305px;
     height: 60px;
     background-color: ${COLORS.OVERLAY};

@@ -3,7 +3,7 @@ import { COLORS, FONTS } from '../../styles/themes/theme';
 
 export const Container = styled.div`
     width: 445px;
-    height: 105px;
+    height: 100px;
     background-color: ${COLORS.PRIMARY_600};
     color: ${COLORS.TEXT_PRIMARY};
     border-radius: 5px;

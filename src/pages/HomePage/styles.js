@@ -9,5 +9,18 @@ export const Container = styled.div`
 
     display: flex;
     align-items: center;
-    justify-content: center;
+`;
+
+export const Main = styled.div`
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+`;
+
+export const WarnContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 `;

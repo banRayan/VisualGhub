@@ -1,16 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import { useAuth } from '../../context/Auth';
 
 import { 
     Container,
+    Main,
+    WarnContainer,
 } from './styles';
 
 // import Settings from '../../components/Settings';
-import Warn from '../../components/Warn';
 import Repository from '../../components/Repository';
-// import Men from '../../components/Men';
-// import Use from '../../components/Use';
+import Warn from '../../components/Warn';
+import Menu from '../../components/Menu';
+import Use from '../../components/Use';
 
 
 
@@ -26,7 +28,15 @@ const HomePage = () => {
     console.log(itemData)
     return(
         <Container>
-            <Repository handleClickRepository={handleClickRepository}/>
+            <Menu/>
+            <Main>
+            <WarnContainer>
+                <Warn>Click on any item in the repository list</Warn>
+                <Warn>Scroll to get access to non-vibles itens</Warn>
+            </WarnContainer>
+                <Repository handleClickRepository={handleClickRepository}/>
+            </Main>
+            <Use />
         </Container>
     )
 }

@@ -3,6 +3,7 @@ import { useAuth } from '../../context/Auth';
 
 import {
     Container,
+    UserBar,
     Picture,
     UserContainer
 } from './styles';
@@ -12,11 +13,13 @@ const User = () => {
 
     return (
         <Container>
-            <Picture src={data.avatar_url} alt="dd"></Picture>
-            <UserContainer>
-                <h1>{data.name}</h1>
-                <p>{data.login}</p>
-            </UserContainer>
+            <UserBar>
+                <Picture src={data.avatar_url} alt="dd"></Picture>
+                <UserContainer>
+                    <h1>{data.name}</h1>
+                    <p>{data.login}</p>
+                </UserContainer>
+            </UserBar>
         </Container>
     )
 }

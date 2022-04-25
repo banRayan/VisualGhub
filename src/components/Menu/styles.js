@@ -1,38 +1,46 @@
-import styled from "styled-components";
-import { colors, fonts } from '../../styles/themes/theme';
+import styled from 'styled-components';
+import { COLORS } from '../../styles/themes/theme';
 
 export const Container = styled.div`
     height: 100%;
-    width: 60px;
+    border-radius: 5px;
+    /* background-color: ${COLORS.OVERLAY}; */
 
-    background-color: ${colors.primary};
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
 `;
 
-export const Header = styled.div`
-    height: 55px;
-    width: 55px;
+export const Bar = styled.div`
+    width: 60px;
+    background-color: rgba(94, 104, 115, 0.50);
+    border-radius: 5px;
+    /* box-shadow: ${COLORS.SHADOW}; */
+`;
 
+export const BoxItem = styled.div`
+    width: 60px;
+    height: 60px;
+    
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    font: 900 1.5rem ${fonts.mainFont};
-    color: #fff;
-    padding: .8rem;
     cursor: pointer;
+    transition: .4s;
 
     &:hover{
-        background-color: ${colors.secondary100};
-        transition: .3s;
-        color: #fff;
+        background-color: ${COLORS.OVERLAY};
+        border-radius: 5px;
+        /* transform: translate(-5px); */
     }
+    `;
+
+export const Item = styled.h2`
+    color: ${COLORS.TEXT_PRIMARY};
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 
-export const Login = styled.div`
-    
-`;

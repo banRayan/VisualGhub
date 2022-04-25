@@ -2,7 +2,6 @@ import React from 'react';
 import { useAuth } from '../../context/Auth';
 
 import RepositoryItem from '../RepositoryItem';
-import User from '../User';
 
 import { 
     Container,
