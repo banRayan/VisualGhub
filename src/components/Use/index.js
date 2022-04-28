@@ -16,7 +16,6 @@ import { FiChevronDown } from "react-icons/fi";
 const Use = () => {
 
     const { data } = useAuth();
-    console.log(data)
     return(
         <Container>
             <UserBar>

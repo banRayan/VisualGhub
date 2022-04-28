@@ -8,6 +8,7 @@ export const Container = styled.div`
     max-height: 600px;
     border-radius: 5px;
     box-shadow: ${COLORS.SHADOW};
+    margin-left: 125px;
 
     display: flex;
     flex-direction: column ;
