@@ -2,12 +2,12 @@ import styled from 'styled-components';
 import { COLORS } from '../../styles/themes/theme';
 
 export const Container = styled.div`
-    height: 100%;
+    width: 100%;
     border-radius: 5px;
     /* background-color: ${COLORS.OVERLAY}; */
 
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: space-between;
     align-items: flex-start;
 `;

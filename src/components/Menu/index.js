@@ -3,7 +3,7 @@ import { Bar, BoxItem, Container, Item } from './styles';
 import { FiMenu, FiUser, FiLayers } from "react-icons/fi";
 import { Link } from 'react-router-dom';
 
-import Settings from '../Settings';
+import User from '../User';
 
 const Menu = () => {
     return(
@@ -24,7 +24,7 @@ const Menu = () => {
                 </Link>
 
             </Bar>
-            <Settings/>
+            <User />
         </Container>
     )
 }
