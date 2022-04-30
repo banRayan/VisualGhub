@@ -1,158 +1,148 @@
 import styled from "styled-components";
-import { colors, fonts } from '../../styles/themes/theme'
+import { COLORS, FONTS } from '../../styles/themes/theme'
 
 export const Container = styled.div`
-    height: 100vh;
     width: 100vw;
-    background-color: ${colors.primary};
-    font-family: ${fonts.mainFont};
+    height: 100vh;
+    padding: 38px 50px 38px 50px;
+    background-color: ${COLORS.BACKGROUND};
 
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+`;
+
+export const Main = styled.main`
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: flex-start;
     justify-content: center;
 `;
 
-export const ProfileContainer = styled.div`
-    height: 100vh;
-    width: 100vw;
-    
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+export const SettingContainer = styled.div`
+    width: 100%;
 `;
 
-export const CardProfile = styled.div`
-    width: 700px;
-    background-color: ${colors.light};
+export const Card = styled.div`
+    width: 490px;
+    background-color: ${COLORS.TEXT_PRIMARY};
+    box-shadow: ${COLORS.SHADOW};
     border-radius: 5px;
-    padding: 50px;
+    padding: 33px 54px;
 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+`;
+
+export const UserContainer = styled.div`
     display: flex;
     flex-direction: column;
 `;
 
-export const UserContainer = styled.div`
-    width: 600px;
+export const User = styled.div`
     display: flex;
-    flex-direction: row;
-    align-items:center;
+
+    margin-bottom: 30px;
 `;
 
-export const Picture = styled.img`
-    height: 120px;
-    width: 120px;
+export const Avatar = styled.img`
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
-    margin: 0 15px 15px 0;
-`;
 
-export const Name = styled.p`
-    color: ${colors.primary};
-    font: 400 1.5rem 'Poppins';
-    margin-bottom: 5px;
-
-    &:hover{
-        text-decoration: underline;
-        color: ${colors.secondary200};
-    }
-`;
-
-export const Username = styled.p`
-    color: #000;
-    font: ${fonts.text500};
-`;
-
-
-export const Bio = styled.div`
-    padding: 10px 10px 10px 0;
-    border-radius: 5px;
-
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-
-    p{
-        color: ${colors.secondary300};
-        font: ${fonts.text400};
-    }
-`;
-
-export const Follows = styled.div`
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-`;
-
-export const FollowsCount = styled.div`
-    font-size: 1rem;
-    font-weight: 600;
-    color: ${colors.primary};
-    display: flex;
     margin-right: 20px;
-    align-items: center;
-    
-    p{
-        font: ${fonts.text500};
-        color: #000;
-        margin-left: 5px;
-    }
 `;
+
+export const Log = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+export const Name = styled.h2`
+    color: ${COLORS.PRIMARY_900};
+    font: 500 1.5rem ${FONTS.MAIN};
+`;
+
+export const Login = styled.p`
+    color: ${COLORS.PRIMARY_600};
+    font: ${FONTS.TEXT_400} ${FONTS.MAIN};
+`;
+
+export const Bio = styled.p`
+    color: ${COLORS.PRIMARY_900};
+    font: ${FONTS.TEXT_500} ${FONTS.MAIN};
+
+    margin-bottom: 30px;
+`;
+
+//Follow Up
+export const FollowUpContainer = styled.div`
+    display: flex;
+
+    margin-bottom: 30px;
+`;
+
+export const FollowUp = styled.div`
+    display: flex;
+    align-items: center;
+
+    margin-right: 30px;
+`;
+
+export const NumberFollowUp = styled.h3`
+    color: ${COLORS.PRIMARY_900};
+    font: ${FONTS.TEXT_600} ${FONTS.MAIN};
+
+    margin-right: 10px;
+`;
+
+export const NameFollowUp = styled.p`
+    color: ${COLORS.PRIMARY_600};
+    font: ${FONTS.TEXT_400} ${FONTS.MAIN};
+`;
+
+
+//Social 
 
 export const SocialContainer = styled.div`
+    width: 100%;
     display: flex;
     align-items: center;
-`;
-
-export const SocialCard = styled.div`
-    display: flex;
     justify-content: center;
-    align-items: center;
 
-    height: 30px;
-    background-color: ${colors.secondary100};
-    color: ${colors.light};
-    border-radius: 5px;
-    margin-right: 10px;
-    padding: 10px;
-
-    h2{
-        display: flex;
-        align-items: center;
-        font-size: 1rem;
-        margin-right: 5px;
-    }
-
-    text-decoration: none;
-    cursor: pointer;
-    transition: .2s;
-
-    &:hover{
-        background-color: ${colors.primary};
-    }
+    margin-top: 30px;
 `;
 
-export const Link = styled.a`
+export const Social = styled.a`
+    display: flex;
+    align-items: center;
+
     text-decoration: none;
     cursor: pointer;
     transition: .2s;
-    
-    
+
+    margin-right: 20px;
+`;
+
+export const MidiaName = styled.p`
+    color: ${COLORS.PRIMARY_900};
+    font: ${FONTS.TEXT_600} ${FONTS.MAIN};
+
+    margin-right: 5px;
+`;
+
+export const MidiaIcon = styled.h3`
+    color: ${COLORS.PRIMARY_600};
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 
 export const Location = styled.div`
     display: flex;
-    align-self: flex-end;
-
-    h4{
-        margin-right: 5px;
-    }
-`;
-
-export const ScoresContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-`;
-
-export const Score = styled.img`
-    margin: 0 0 10px 50px;
+    align-items: center;
 `;
