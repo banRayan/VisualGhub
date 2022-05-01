@@ -6,12 +6,12 @@
 
 ____
 
-
-<img src="https://user-images.githubusercontent.com/84761488/162817865-ea13a291-70d1-4a44-bf03-2d69bf6fdc28.png">
+<img src="https://user-images.githubusercontent.com/84761488/166160384-fb848387-c63e-400c-8cbc-5d3f398972d2.png">
+<img src="https://user-images.githubusercontent.com/84761488/166160331-faca7fdb-68f7-4a38-88e0-7ba2029f3cac.png">
 
 <div align="center">
-	<img src="https://user-images.githubusercontent.com/84761488/162828742-cab6eb9b-36d4-420a-bc0e-41a1849ae6cf.png" width="500px">
-	<img src="https://user-images.githubusercontent.com/84761488/162828989-9e422448-d40d-4fca-b24e-719bd65479ac.png" width="500px">
+	<img src="https://user-images.githubusercontent.com/84761488/166160269-d640c3e6-eb82-4779-984f-5b13aa94ebd5.png" width="500px">
+	<img src="https://user-images.githubusercontent.com/84761488/166160527-46241335-ef55-41d3-8524-c5fd90f57c01.png" width="500px">
 </div>
 
 ## Sobre 
@@ -34,6 +34,7 @@ ____
 <p>O projeto conta com recursos fornecidos pelo react e libs externas, sendo esses:</p>
 
 * React Router DOM - Roteamento client-side
+* Styled Components - CSS in JS
 * ContextAPI - Descentralização de dados
 * Axios - HTTP Client
 * React Icons - ícones
