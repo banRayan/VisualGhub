@@ -126,17 +126,21 @@ export const Social = styled.a`
     transition: .2s;
 
     margin-right: 20px;
+
+    &:hover{
+        text-decoration: underline;
+    }
 `;
 
 export const MidiaName = styled.p`
     color: ${COLORS.PRIMARY_900};
-    font: ${FONTS.TEXT_600} ${FONTS.MAIN};
+    font: ${FONTS.TEXT_500} ${FONTS.MAIN};
 
     margin-right: 5px;
 `;
 
 export const MidiaIcon = styled.h3`
-    color: ${COLORS.PRIMARY_600};
+    color: ${COLORS.PRIMARY_800};
     display: flex;
     align-items: center;
     justify-content: center;
