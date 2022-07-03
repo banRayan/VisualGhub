@@ -1,221 +1,151 @@
-import styled from "styled-components";
-import { colors, fonts } from '../../styles/themes/theme'
+import styled from 'styled-components';
+import {COLORS, FONTS } from '../../styles/themes/theme';
 
 export const Container = styled.div`
     width: 100vw;
     height: 100vh;
+    padding: 38px 50px 38px 50px;
+    background-color: ${COLORS.BACKGROUND};
 
-    background-color: ${colors.primary};
-
-    display: flex;
-`;
-
-export const MainContainer = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+`;
+
+export const Main = styled.div`
     width: 100%;
-    height: 100%;
-`;
-
-export const PageContainer = styled.div`
-    display: flex;
-    padding: 50px;
-
-    width: 100%;
-    height: 100%;
-`;
-
-export const GridContainer = styled.main`
-    width: 100%;
-    height: 100%;
-    
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 2fr;
-    grid-template-areas: 
-    'infoArea descriptionArea'
-    'counterArea .'   ;
-    
-    `;
-
-export const UserContainer = styled.div`
-    display: flex;
-    flex-direction: column ;
-    justify-content:flex-start ;
-`;
-
-export const InfoArea = styled.div`
-    grid-area: infoArea;
 
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-`;
-
-export const InfoContainer = styled.div`
-    width: 400px;
-    height: 200px;
-
-    display: flex;
-    flex-direction: column;
-`;
-
-export const Title = styled.h1`
-    font: ${fonts.title700};
-    color: ${colors.light};
-    margin-bottom: 20px;
-`;
-
-export const LinkContainer = styled.div`
-    display: flex;
-    align-items: center;
-
-    h3{
-        display: flex;
-        align-items: center;
-        color: ${colors.light};
-    }
-`;
-
-export const Link = styled.a`
-    color: ${colors.secondary100};
-    text-decoration: none;
-    cursor: pointer;
-    margin-left: 10px;
-
-    &:hover{
-        text-decoration: underline;
-        color: ${colors.light}
-    }
-`;
-
-export const Text = styled.p`
-    font: ${fonts.text400};
-`;
-
-export const DescriptionArea = styled.div`
-    grid-area: descriptionArea;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-
-`;
-
-export const DescriptionContainer = styled.div`
-    width: 400px;
-    height: 200px;
-    border-radius: 5px;
-    background-color: ${colors.light} ;
-
-    display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 `;
 
-export const Description = styled.p`
-    width: 300px;
-
-    font: ${fonts.text400};
-    color: ${colors.secondary200};
+export const WarnContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 `;
 
-export const RightBar = styled.div`
-    width: 80px;
-    height: 100vh;
-    background-color: ${colors.primary} ;
+//Data Repository
+
+export const DataContainer = styled.div`
+    width: 500px;
+    height: 600px;
+    /* background-color: ${COLORS.OVERLAY}; */
 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
-    h2{
-        padding: 20px;
-        display: flex;
-        align-items: center;
-        color: ${colors.light};
-    }
 `;
 
-//Card Area
-
-export const CounterArea = styled.div`
-    grid-area: counterArea;
+export const ItemContainer = styled.div`
+    width: 340px;
 
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
 
+    margin-bottom: 50px;
 `;
 
-export const CounterContainer = styled.div`
-    width: 400px;
-    height: 200px;
+export const SectionName = styled.h1`
+    color: ${COLORS.TEXT_PRIMARY};
+    font: 500 3rem ${FONTS.MAIN};
 
+    margin-bottom: 12px;
+`;
+
+export const ItemName = styled.p`
+    color: ${COLORS.TEXT_PRIMARY};
+    font: 500 1.2rem ${FONTS.MAIN};
+`;
+
+export const DescriptionContainer = styled.div`
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 50px;
+`;
+
+export const Title = styled.h2`
+    color: ${COLORS.PRIMARY_600};
+    font: ${FONTS.TEXT_500} ${FONTS.MAIN};
+
+    margin-bottom: 12px;
+`;
+
+export const Description = styled.p`
+    color: ${COLORS.TEXT_PRIMARY};
+    font: ${FONTS.TEXT_500} ${FONTS.MAIN};
+`;
+
+
+//Score 
+
+export const CardsContainer = styled.div`
     display: flex;
     align-items: center;
 
-    h4{
-        display: flex;
-        align-items: center;
-        color: ${colors.secondary200};
-    }
-
+    margin-bottom: 50px;
 `;
 
-export const CountContainer = styled.div`
-    width: 80px;
+export const CardScore = styled.div`
+    width: 90px;
     height: 40px;
+    background-color: ${COLORS.OVERLAY};
     border-radius: 5px;
-    background-color: ${colors.light};
-    color: ${colors.secondary200};
+    padding: 0 7px 0 12px;
+    margin-right: 12px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px;
-    margin-right: 20px;
+
+`;
+export const Score = styled.p`
+    color: ${COLORS.TEXT_PRIMARY};
+    font: ${FONTS.TEXT_500} ${FONTS.MAIN};
 `;
 
-export const Count = styled.div`
-    font: ${fonts.text600};
-    color: ${colors.secondary200};
-`;
-
-//deal with lack of information
-
-export const NoClickContainer = styled.div`
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-`;
-
-export const NoClick = styled.div`
-    display: flex;
-    flex-direction: column;
-    padding: 5rem;
-
-    border: 1px solid ${colors.light};
-    border-radius: 5px;
-
-    p{
-        color: ${colors.light};
-        font: ${fonts.text400};
-    }
-`;
-
-export const NoDescription = styled.div`
+export const ScoreIcon = styled.h3`
     display: flex;
     align-items: center;
     justify-content: center;
+    color: ${COLORS.TEXT_PRIMARY};
+`;
 
-    p{
-        color: ${colors.secondary200};
-        font: ${fonts.text400};
+export const Link = styled.a`
+    color: ${COLORS.TEXT_PRIMARY};
+    font: ${FONTS.TEXT_500} ${FONTS.MAIN};
+    text-decoration: none;
+    cursor: pointer;
+    transition: .2s;
+
+    display: flex;
+    align-items: center;
+
+    h2{ 
+        color: ${COLORS.TEXT_PRIMARY};
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-right: 7px;
     }
+
+    &:hover{
+        text-decoration: underline;
+        color: ${COLORS.PRIMARY_600};
+    }
+`;
+
+//Settings
+
+export const SettingsContainer = styled.div`
+    width: 100%;
+
+    display: flex;
+    align-self: flex-start;
 `;

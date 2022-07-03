@@ -1,22 +1,34 @@
 import React from 'react';
 import { useAuth } from '../../context/Auth';
-
-import {
+import {  
     Container,
-    Picture,
-    UserContainer
+    UserBar,
+    BoxAvatar,
+    Avatar,
+    UserContainer, 
+    BoxIcon,
+    Icon,
+    Name,
+
 } from './styles';
+import { FiChevronDown } from "react-icons/fi";
 
 const User = () => {
-    const { data } = useAuth();
 
-    return (
+    const { data } = useAuth();
+    return(
         <Container>
-            <Picture src={data.avatar_url} alt="dd"></Picture>
-            <UserContainer>
-                <h1>{data.name}</h1>
-                <p>{data.login}</p>
-            </UserContainer>
+            <UserBar>
+                <BoxAvatar>
+                    <Avatar src={data.avatar_url} />
+                </BoxAvatar>
+                <UserContainer>
+                    <Name>{data.login}</Name>
+                    <BoxIcon>
+                        <Icon><FiChevronDown/></Icon>
+                    </BoxIcon>
+                </UserContainer>
+            </UserBar>
         </Container>
     )
 }

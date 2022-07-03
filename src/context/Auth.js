@@ -6,6 +6,7 @@ export const AuthContext = createContext({});
 export const AuthProvider = (props) => {
     const [ data, setData] = useState([]);
     const [username, setUsername] = useState('banRayan');
+    const [repository, setRepository] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -15,13 +16,23 @@ export const AuthProvider = (props) => {
         fetchData()
     },[username])
 
+
+    useEffect(() => {
+        const fetchRepository = async () => {
+            await axios.get(`https://api.github.com/users/${username}/repos`)
+                .then(response => setRepository(response.data))
+        }
+        fetchRepository()
+    }, [username])
+
     return (
     <AuthContext.Provider 
      value={{
          data,
          setData,
          username,
-         setUsername
+         setUsername,
+         repository
         }}
      >
          {props.children}

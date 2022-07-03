@@ -1,35 +1,73 @@
-import styled from "styled-components";
-import { colors, fonts } from '../../styles/themes/theme';
+import styled from 'styled-components';
+import { COLORS, FONTS } from '../../styles/themes/theme';
 
 export const Container = styled.div`
-    height: 128px;
-    background-color: ${colors.light};
-    border-radius: 5px 5px 0 0;
+    height: 100%;
 
     display: flex;
-    flex-direction: row;
+`;
+
+export const UserBar = styled.div`
+    width: 305px;
+    height: 60px;
+    background-color: ${COLORS.OVERLAY};
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+`;
+
+export const BoxAvatar = styled.div`
+    width: 60px;
+    height: 60px;
+    background-color: ${COLORS.OVERLAY};
+    border-radius: 5px;
+
+    display: flex;
     align-items: center;
     justify-content: center;
 `;
 
-
-export const Picture = styled.img`
-    height: 65px;
-    width: 65px;
-    border-radius: 50%;
-    margin-right: 1rem;
+export const Avatar = styled.img`
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
 `;
 
 export const UserContainer = styled.div`
-    color: ${colors.secondary200};
+    width: 265px;
+    height: 60px;
 
-    h1{
-        font: 600 1.3rem 'Poppins', Arial, Helvetica, sans-serif;
-    }
-
-    p{
-    font: ${fonts.text400};
-    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 `;
 
+export const Name = styled.p`
+    margin-left: 25px;
+    font: 500 1.2rem ${FONTS.MAIN};
+    color: ${COLORS.TEXT_PRIMARY};
+`;
 
+export const BoxIcon = styled.div`
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+`;
+
+export const Icon = styled.h2`
+    color: ${COLORS.TEXT_PRIMARY};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+    cursor: pointer;
+
+    &:hover{
+        transform: translateY(5px);
+    }
+`;

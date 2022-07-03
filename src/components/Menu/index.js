@@ -1,34 +1,28 @@
-import React from 'react'
+import React from 'react';
+import { Bar, BoxItem, Container, Item } from './styles';
+import { FiMenu, FiUser, FiLayers } from "react-icons/fi";
 import { Link } from 'react-router-dom';
 
-import { 
-    Container,
-    Header,
-    Login
-} from './styles';
-
-import { FiArchive, FiLogIn, FiUser } from "react-icons/fi"
 
 const Menu = () => {
     return (
         <Container>
-            <Login>
-                <Link to={'/'}>
-                    <Header>
-                        <FiLogIn />
-                    </Header>
+            <Bar>
+                <BoxItem>
+                    <Item><FiMenu /></Item>
+                </BoxItem>
+                <Link to={'/Profile'}>
+                    <BoxItem>
+                        <Item><FiUser /></Item>
+                    </BoxItem>
                 </Link>
-            </Login>
-            <Link to={'/profile'}>
-                <Header>
-                    <FiUser />
-                </Header>
-            </Link>
-            <Link to={'/home'}>
-                <Header>
-                    <FiArchive />
-                </Header>
-            </Link>
+                <Link to={'/Home'}>
+                    <BoxItem>
+                        <Item><FiLayers /></Item>
+                    </BoxItem>
+                </Link>
+
+            </Bar>
         </Container>
     )
 }
