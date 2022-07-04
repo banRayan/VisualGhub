@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { COLORS } from '../../styles/themes/theme';
 
 export const Container = styled.div`
-    background-color: ${COLORS.TEXT_PRIMARY};
+    background-color: #FCFCFC;
     width: 500px;
     min-height: 425px;
     max-height: 600px;

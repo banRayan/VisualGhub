@@ -1,20 +1,21 @@
 export const colors = {
     light: '#fff',
-    
+
     primary: '#24292F',
-    secondary100: '#5E6873', 
+    secondary100: '#5E6873',
     secondary200: '#121026',
     secondary300: '#424B55'
 };
 
 export const COLORS = {
-    BACKGROUND: '#24292F',
+    BACKGROUND: '#F2F2F2',
 
     PRIMARY_900: '#0E1824',
     PRIMARY_800: '#171F29',
     PRIMARY_700: '#424B55',
-    PRIMARY_600: '#5E6873',
-   
+    PRIMARY_600: '#878A8C',
+    PRIMARY_500: 'rgba(255, 255, 255, 0.9)',
+
     OVERLAY: 'rgba(94, 104, 115, 0.50)',
     SHADOW: '5px 4px 12px rgba(0, 0, 0, 0.25)',
 
@@ -23,7 +24,7 @@ export const COLORS = {
 }
 
 export const fonts = {
-    mainFont:'Poppins',
+    mainFont: 'Poppins',
     title700: '700 2rem Poppins',
     title500: '500 2rem Poppins',
     text600: '600 1rem Poppins',
