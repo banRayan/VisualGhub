@@ -3,7 +3,8 @@ import { COLORS } from '../../styles/themes/theme'
 
 export const Container = styled.div`
     height: 120px;
-    width: 100vw;
+    width: 100%;
+
     background-color: ${COLORS.PRIMARY_500};
     border-radius: 3px;
     margin-left: .1rem;
@@ -43,6 +44,7 @@ export const Search = styled.input`
     height: 2rem;
     padding: 0 1rem 0 1rem;
     border: none;
+    background-color: transparent;
 
     &:focus{
         border: 0 none;

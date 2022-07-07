@@ -26,14 +26,6 @@ export const StatusContainer = styled.div`
     justify-content: space-between;
 `;
 
-export const Status = styled.div`
-    padding: 5px 10px;
-    background-color: #2C974B;
-    border-radius: 5px;
-    color: white;
-    font: 700 .7rem Arial;
-    text-align: center;
-`;
 
 export const Techs = styled.div`
     color: ${COLORS.PRIMARY_600};
