@@ -3,11 +3,11 @@ import { COLORS } from '../../styles/themes/theme';
 
 export const Container = styled.div`
     background-color: ${COLORS.PRIMARY_500};
-    width: 500px;
+    width: 400px;
     min-height: 425px;
     max-height: 600px;
     border-radius: 5px;
-    margin-left: 20px;
+    margin-left: 1rem;
 
     display: flex;
     flex-direction: column ;

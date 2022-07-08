@@ -8,16 +8,16 @@ const Menu = () => {
         <Container>
             <Brand />
             <Bar>
-                <StyledLink to={'/Home'}>
+                <StyledLink to={'/home'}>
                     <BoxItem>
                         <Icon><FiHome size={24} className="IconStyle" /></Icon>
                         <Text>Home </Text>
                     </BoxItem>
                 </StyledLink>
-                <StyledLink to={'/Profile'}>
+                <StyledLink to={'/'}>
                     <BoxItem>
                         <Icon><FiUser size={24} className="IconStyle" /></Icon>
-                        <Text>Profile</Text>
+                        <Text>Login</Text>
                     </BoxItem>
                 </StyledLink>
 
