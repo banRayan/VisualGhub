@@ -1,12 +1,14 @@
 import React from "react";
 import { useAuth } from "../../context/Auth";
 import { Avatar, Bio, Container, Name, UserContainer, User, FollowupContainer, Followup, FollowupNumber, FollowupLabel, Footer, Link, MidiaName, Username } from "./styles";
+import { TitleCard } from "../../pages/Home/styles";
 
 export function Profile() {
     const { data } = useAuth();
 
     return (
         <Container>
+            <TitleCard>Developer</TitleCard>
             <UserContainer>
                 <Avatar src={data.avatar_url} />
                 <User>

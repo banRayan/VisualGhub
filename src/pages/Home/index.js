@@ -8,13 +8,12 @@ import Menu from "../../components/Menu";
 
 import {
     Container,
-    ContentContainer,
     Card,
     CardContainer,
     RightContainer,
     TitleCard,
     LeftContent,
-    Content
+    Content,
 } from "./styles";
 
 export function Home() {
@@ -36,22 +35,30 @@ export function Home() {
             <Menu />
             <RightContainer>
                 <Header />
-                <ContentContainer>
-                    <Content>
-                        <LeftContent>
-                            <CardContainer>
-                                {/* <TitleCard>Repository</TitleCard> */}
-                                <Card style={{ fontSize: 24, fontWeight: 700 }}>{clickedItem.name}</Card>
-                            </CardContainer>
-                            <CardContainer>
-                                <TitleCard>Description</TitleCard>
-                                <Card>{clickedItem.description}</Card>
-                            </CardContainer>
-                            <Profile />
-                        </LeftContent>
-                        <Repository handleClickRepository={handleClickRepository} />
-                    </Content>
-                </ContentContainer>
+                <Content>
+                    <Profile />
+                    <LeftContent>
+                        {
+                            clickedItem.length === 0
+                                ? ''
+                                :
+                                <CardContainer>
+                                    <TitleCard>Repository name</TitleCard>
+                                    <Card style={{ fontSize: 24, fontWeight: 700 }}>{clickedItem.name}</Card>
+                                </CardContainer>
+                        }
+                        {
+                            clickedItem.description === null | clickedItem.length === 0
+                                ? ''
+                                :
+                                <CardContainer>
+                                    <TitleCard>Description</TitleCard>
+                                    <Card>{clickedItem.description}</Card>
+                                </CardContainer>
+                        }
+                    </LeftContent>
+                    <Repository handleClickRepository={handleClickRepository} />
+                </Content>
             </RightContainer>
         </Container>
     )

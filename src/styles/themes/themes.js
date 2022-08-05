@@ -8,10 +8,7 @@ export const light = {
         secondary80: '#737373',
         secondary85: '#8C8C8C',
         secondary70: '#BFBFBF',
-        secondary60: '#1B2565',
-        secondary50: '#243189',
-        secondary40: '#1D2766',
-        secondary30: '#495BCC',
+
 
         text_primary: '#000',
         text_secondary: '#fff',
@@ -30,6 +27,7 @@ export const light = {
         title500: '400 1.3rem',
         text400: '400 1rem',
         text500: '500 1rem',
+        text600: '600 1rem',
         text700: '700 1rem',
     }
 }

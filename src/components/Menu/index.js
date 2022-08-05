@@ -1,23 +1,26 @@
 import React from 'react';
 import { Bar, BoxItem, Brand, Container, Icon, StyledLink, Text } from './styles';
-import { FiUser, FiHome } from "react-icons/fi";
+import { FiHome, FiLogOut } from "react-icons/fi";
 
 
-const Menu = () => {
+const Menu = (props) => {
+
+    const { me } = props;
+    console.log(me)
     return (
         <Container>
             <Brand />
             <Bar>
-                <StyledLink to={'/home'}>
+                <StyledLink to={'/home'} >
                     <BoxItem>
-                        <Icon><FiHome size={24} className="IconStyle" /></Icon>
-                        <Text>Home </Text>
+                        <Icon><FiHome size={22} className="IconStyle" /></Icon>
+                        <Text>Home</Text>
                     </BoxItem>
                 </StyledLink>
                 <StyledLink to={'/'}>
                     <BoxItem>
-                        <Icon><FiUser size={24} className="IconStyle" /></Icon>
-                        <Text>Login</Text>
+                        <Icon><FiLogOut size={22} className="IconStyle" /></Icon>
+                        <Text>Log out</Text>
                     </BoxItem>
                 </StyledLink>
 

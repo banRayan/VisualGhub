@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import { colors, fonts } from '../../styles/themes/theme';
+import { light } from '../../styles/themes/themes';
 
 export const Container = styled.div`
     height: 100vh;
     width: 100vw;
 
-    background-color: ${colors.primary};
+    background-color: ${light.colors.primary};
 
     display: flex;
     align-items: center;
@@ -29,13 +29,13 @@ export const DescriptionContainer = styled.div`
 `;
 
 export const Title = styled.h1`
-    color: ${colors.light};
-    font: 500 6rem 'Poppins';
+    color: ${light.colors.secondary100};
+    font: 500 6rem ${light.fonts.fontMain};
 `;
 
 export const Message = styled.p`
-    color: ${colors.light};
-    font: 400 1.5rem 'Poppins';
+    color: ${light.colors.secondary90};
+    font: 400 1.5rem ${light.fonts.fontMain};
     margin-bottom: 27px;
 `;
 
@@ -44,8 +44,8 @@ export const Button = styled.button`
     height: 60px;
     border-radius: 5px;
     border: none;
-    box-shadow: 5px 4px 12px rgba(0, 0, 0, 0.25);
-    font: ${fonts.text400};
+    font:${light.fonts.text600} ${light.fonts.fontMain};
+    color: ${light.colors.secondary100};
     cursor: pointer;
     transition: .2s;
 
@@ -54,13 +54,13 @@ export const Button = styled.button`
     }
 
     &:hover{
-        background-color: ${colors.primary};
-        color: ${colors.light};
-        border: 1px solid ${colors.light};
+        background-color: ${light.colors.secondary100};
+        color: ${light.colors.text_secondary};
+        border: 1px solid ${light.colors.text_secondary};
     }
 `;
 
 export const ErrorDescription = styled.h2`
-    color: rgba(255, 255, 255, 0.5);
-    font: 700 20rem 'Poppins';
+    color: ${light.colors.secondary100};
+    font: 700 20rem ${light.fonts.fontMain};
 `;

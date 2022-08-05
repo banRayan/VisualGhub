@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/Auth';
 
 import {
-  Title,
   Container,
   HeadingContainer,
   Heading,
@@ -57,11 +56,10 @@ export const PrimaryLogin = () => {
   return (
     <Container>
       <HeadingContainer>
-        <Heading className='Heading'>
-          <Title>Enter your Github<br /> username</Title>
-          <Description>With your username we can access your gitHub data</Description>
-        </Heading>
         <Logo>Visual Ghub</Logo>
+        <Heading >
+          <Description>Enter your Github username to access your informations</Description>
+        </Heading>
       </HeadingContainer>
       <InputContainer>
         <InputField>

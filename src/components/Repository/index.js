@@ -3,7 +3,7 @@ import { useAuth } from '../../context/Auth';
 
 import RepositoryItem from '../RepositoryItem';
 
-import { 
+import {
     Container,
     Item,
     List,
@@ -12,13 +12,13 @@ import {
 const Repository = ({ handleClickRepository }) => {
 
     const { repository } = useAuth();
-    return(
+    return (
         <Container>
             <List>
                 {
-                    repository.map(repo => 
+                    repository.map(repo =>
                         <Item key={repo.id}>
-                            <RepositoryItem repo={repo} handleClickRepository={handleClickRepository}/>
+                            <RepositoryItem repo={repo} handleClickRepository={handleClickRepository} />
                         </Item>
                     )
                 }

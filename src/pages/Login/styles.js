@@ -1,12 +1,11 @@
 import styled from "styled-components";
-import  { colors, fonts } from '../../styles/themes/theme';
+import { light } from '../../styles/themes/themes';
 
 export const Container = styled.div`
     height: 100vh;
     width: 100vw;
-    font-family: ${fonts.mainFont};
-    background-color: ${colors.primary};
-    color: #fff;
+    font-family: ${light.fonts.fontMain};
+    background-color: ${light.colors.background};
     
     display: flex;
     align-items: center;

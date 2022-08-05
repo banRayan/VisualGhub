@@ -12,10 +12,14 @@ export function Header() {
         setInputUsername(e.target.value)
     }
 
-    console.log(inputUsername)
     const handleButtonClick = () => {
         setUsername(inputUsername);
+    }
 
+    const handleKeyDown = (event) => {
+        if (event.key === "Enter") {
+            handleButtonClick();
+        }
     }
 
     return (
@@ -25,6 +29,7 @@ export function Header() {
                     type="text"
                     placeholder="Search username"
                     onChange={handleInputChange}
+                    onKeyDown={handleKeyDown}
                 />
                 <ButtonSearch onClick={handleButtonClick}><FiSearch size={20} /></ButtonSearch>
             </SearchContainer>
