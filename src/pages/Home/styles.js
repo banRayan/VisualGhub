@@ -1,151 +1,87 @@
-import styled from 'styled-components';
-import {COLORS, FONTS } from '../../styles/themes/theme';
+import styled from "styled-components";
+import { light } from '../../styles/themes/themes';
 
 export const Container = styled.div`
-    width: 100vw;
     height: 100vh;
-    padding: 38px 50px 38px 50px;
-    background-color: ${COLORS.BACKGROUND};
-
+    width: 100vw;
+    background-color: ${light.colors.background};
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
 `;
 
-export const Main = styled.div`
+export const RightContainer = styled.div`
+    height: 100%;
     width: 100%;
-
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-`;
-
-export const WarnContainer = styled.div`
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-`;
-
-//Data Repository
-
-export const DataContainer = styled.div`
-    width: 500px;
-    height: 600px;
-    /* background-color: ${COLORS.OVERLAY}; */
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-`;
-
-export const ItemContainer = styled.div`
-    width: 340px;
-
-    display: flex;
-    flex-direction: column;
-
-    margin-bottom: 50px;
-`;
-
-export const SectionName = styled.h1`
-    color: ${COLORS.TEXT_PRIMARY};
-    font: 500 3rem ${FONTS.MAIN};
-
-    margin-bottom: 12px;
-`;
-
-export const ItemName = styled.p`
-    color: ${COLORS.TEXT_PRIMARY};
-    font: 500 1.2rem ${FONTS.MAIN};
-`;
-
-export const DescriptionContainer = styled.div`
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-
-    margin-bottom: 50px;
-`;
-
-export const Title = styled.h2`
-    color: ${COLORS.PRIMARY_600};
-    font: ${FONTS.TEXT_500} ${FONTS.MAIN};
-
-    margin-bottom: 12px;
-`;
-
-export const Description = styled.p`
-    color: ${COLORS.TEXT_PRIMARY};
-    font: ${FONTS.TEXT_500} ${FONTS.MAIN};
-`;
-
-
-//Score 
-
-export const CardsContainer = styled.div`
-    display: flex;
     align-items: center;
 
-    margin-bottom: 50px;
+    @media (max-width: 1024px){
+        overflow-y: scroll;
+    }
 `;
 
-export const CardScore = styled.div`
-    width: 90px;
-    height: 40px;
-    background-color: ${COLORS.OVERLAY};
-    border-radius: 5px;
-    padding: 0 7px 0 12px;
-    margin-right: 12px;
-
+export const Content = styled.div`
+    height: 90%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-`;
-export const Score = styled.p`
-    color: ${COLORS.TEXT_PRIMARY};
-    font: ${FONTS.TEXT_500} ${FONTS.MAIN};
-`;
-
-export const ScoreIcon = styled.h3`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: ${COLORS.TEXT_PRIMARY};
-`;
-
-export const Link = styled.a`
-    color: ${COLORS.TEXT_PRIMARY};
-    font: ${FONTS.TEXT_500} ${FONTS.MAIN};
-    text-decoration: none;
-    cursor: pointer;
-    transition: .2s;
-
-    display: flex;
-    align-items: center;
-
-    h2{ 
-        color: ${COLORS.TEXT_PRIMARY};
-
-        display: flex;
-        align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    
+    @media (max-width: 1024px){
+        margin: auto;
         justify-content: center;
-
-        margin-right: 7px;
+        align-items: flex-start;
+        overflow-y: scroll;
     }
 
-    &:hover{
-        text-decoration: underline;
-        color: ${COLORS.PRIMARY_600};
+    @media (max-width: 400px){
+        padding: 0;
     }
 `;
 
-//Settings
-
-export const SettingsContainer = styled.div`
-    width: 100%;
-
+export const LeftContent = styled.section`
+    max-height: 600px;
     display: flex;
-    align-self: flex-start;
+    flex-direction: column;
+
+    @media (min-width: 1025px){
+        margin-right: 1rem;
+    }
 `;
+
+export const CardContainer = styled.div`
+    width: 450px;
+    background-color: ${light.colors.primary};
+    border-radius: 5px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+`;
+
+export const Card = styled.p`
+    max-height: 140px;
+    font: ${light.fonts.text400} ${light.fonts.fontMain};
+    display: block;
+    margin: 0 auto;
+
+    @media (max-width: 400px){
+        margin: 0;
+        width: 250px;
+        max-height: 400px;
+    }
+
+
+`;
+
+export const TitleCard = styled.div`
+    width: 150px;
+    color: ${light.colors.secondary80};
+    margin: 0 1rem 1rem 0;
+    border-radius: 5px;
+    font: 500 .9rem ${light.fonts.fontMain};
+    display: flex;
+    align-items: center;
+`;
+

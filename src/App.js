@@ -7,13 +7,13 @@ import GlobalStyle from './styles/themes/GlobalStyle';
 
 
 const App = () => {
-    return(
-            <AuthProvider>
-                <Router>
-                    <Routes />
-                    <GlobalStyle />
-                </Router>
-            </AuthProvider>
+    return (
+        <AuthProvider>
+            <Router>
+                <Routes />
+                <GlobalStyle />
+            </Router>
+        </AuthProvider>
     )
 }
 

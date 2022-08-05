@@ -1,106 +1,65 @@
-import React, { useState } from 'react';
+import { useEffect, useState } from "react";
+import { useAuth } from "../../context/Auth";
 
-import { useAuth } from '../../context/Auth';
-import { FiLink2, FiStar, FiGitBranch, FiGitPullRequest } from "react-icons/fi";
+import { Header } from "../../components/Header";
+import { Profile } from "../../components/Profile";
+import Repository from "../../components/Repository";
+import Menu from "../../components/Menu";
 
-import { 
+import {
     Container,
-    Main,
-    WarnContainer,
-    DataContainer,
-    SectionName,
-    ItemName,
-    ItemContainer,
-    DescriptionContainer,
-    Title,
-    Description,
-    Link,
-    CardsContainer,
-    CardScore,
-    Score,
-    ScoreIcon,
-    SettingsContainer,
-} from './styles';
+    Card,
+    CardContainer,
+    RightContainer,
+    TitleCard,
+    LeftContent,
+    Content,
+} from "./styles";
 
-import Repository from '../../components/Repository';
-import Settings from '../../components/Settings';
-import Warn from '../../components/Warn';
-import Menu from '../../components/Menu';
+export function Home() {
+    const { repository, username } = useAuth();
+    const [clickedItem, setClickedItem] = useState([]);
 
+    useEffect(() => {
+        setClickedItem([])
+    }, [username])
 
-
-const HomePage = () => {
-    const { repository } = useAuth();
-    const [ itemData, setItemRepoData ] = useState([]);
-
-    const handleClickRepository = ( id ) => {
-        const  [repo]  = repository.filter( repo => repo.id === id);
-        setItemRepoData(repo)
+    const handleClickRepository = (id) => {
+        const [repo] = repository.filter(repo => repo.id === id);
+        setClickedItem(repo)
     }
 
-    console.log(itemData.description)
-    return(
+    console.log(clickedItem.description);
+    return (
         <Container>
-            <Menu/>
-            <Main>
-            {
-            itemData.length === 0 
-        
-            ?
-                <WarnContainer>
-                    <Warn>Click on any item in the repository list</Warn>
-                    <Warn>Scroll to get access to non-vibles itens</Warn>
-                </WarnContainer>
-
-            : 
-                <DataContainer>
-                    <ItemContainer>
-                        <SectionName>Repository Data</SectionName>
-                        <Title>Name</Title>
-                        <ItemName>{itemData.name}</ItemName>
-                    </ItemContainer>
-                    <DescriptionContainer>
-                        <Title>Description</Title>
-                        <Description>
-                            {
-
-                                itemData.description === null
-                                ?
-                                'No description'
-                                : itemData.description
-                            }
-                        </Description>
-                    </DescriptionContainer>
-                    <CardsContainer>
-                        <CardScore>
-                            <Score>{itemData.stargazers_count}</Score>
-                            <ScoreIcon>
-                                <FiStar />
-                            </ScoreIcon>
-                        </CardScore>
-                        <CardScore>
-                            <Score>{itemData.stargazers_count}</Score>
-                            <ScoreIcon>
-                                <FiGitBranch />
-                            </ScoreIcon>
-                        </CardScore>
-                        <CardScore>
-                            <Score>{itemData.open_issues_count}</Score>
-                            <ScoreIcon>
-                                <FiGitPullRequest />
-                            </ScoreIcon>
-                        </CardScore>
-                    </CardsContainer>
-                    <Link href={itemData.html_url} rel='external' target='_blank'><h2><FiLink2/></h2>Repository Link</Link>
-                </DataContainer>
-            }
-                <Repository handleClickRepository={handleClickRepository}/>
-            </Main>
-            <SettingsContainer>
-                <Settings />
-            </SettingsContainer>
+            <Menu />
+            <RightContainer>
+                <Header />
+                <Content>
+                    <Profile />
+                    <LeftContent>
+                        {
+                            clickedItem.length === 0
+                                ? ''
+                                :
+                                <CardContainer>
+                                    <TitleCard>Repository name</TitleCard>
+                                    <Card style={{ fontSize: 24, fontWeight: 700 }}>{clickedItem.name}</Card>
+                                </CardContainer>
+                        }
+                        {
+                            clickedItem.description === null | clickedItem.length === 0
+                                ? ''
+                                :
+                                <CardContainer>
+                                    <TitleCard>Description</TitleCard>
+                                    <Card>{clickedItem.description}</Card>
+                                </CardContainer>
+                        }
+                    </LeftContent>
+                    <Repository handleClickRepository={handleClickRepository} />
+                </Content>
+            </RightContainer>
         </Container>
     )
 }
-
-export default HomePage;
