@@ -1,22 +1,27 @@
 <h2 align="center">Visual Ghub</h2>
 
-<img src="https://user-images.githubusercontent.com/84761488/166160384-fb848387-c63e-400c-8cbc-5d3f398972d2.png">
+## Demo
+
+<p>Você pode acessar o site por meio desse link: </p>
+<a href="https://banrayan.github.io/VisualGhub/">Visual Ghub</a>
 
 ## Sobre 
 
-<p>Minha ideia foi sintetizar em um único projeto os principais conceitos e recursos utilizados atualmente no mercado tecnológico, aplicando e testando meus conhecimentos na biblioteca, assim me desafiando a aprender enquanto pratico. </p>
-
-<p>O projeto se trata de uma apresentação remodelada dos dados de usuários do GitHub, onde através do nome de usuário, o site consome informações do mesmo, como: lista de repositórios, títulos, descrições e resultados dos projetos diretamente da API do GitHub e os apresenta de uma nova forma.</p>
-
-<p>O Visual Ghub não é um projeto de inovação tecnológica tendo em vista que existem inúmeros sites semelhantes no ar, no entanto, como foi dito anteriormente o principal objetivo do projeto é pôr em prática meus conhecimentos técnicos dos recursos oferecidos pela biblioteca.</p>
+<p>O projeto consiste em modelo alternativo de exibição dos dados de usuários do GitHub, onde através do nome de usuário, o site consome informações do mesmo, como: lista de repositórios, títulos, descrições e resultados dos projetos diretamente da API do GitHub e os apresenta de uma nova forma.</p>
 
 <a href="https://dribbble.com/shots/16271760-Sidebar-navigation-for-Dashboard/attachments/8139906?mode=m">Layout</a> by <a href="https://dribbble.com/tranmautritam">tranmautritam</a>
-## Features
+
+<img src="https://user-images.githubusercontent.com/84761488/183534498-54926aeb-7baa-4edc-a659-c55aedd785fe.png" />
+<img src="https://user-images.githubusercontent.com/84761488/183534698-81551fc1-ed99-46aa-aa06-aa34b35041b3.png" />
+<img src="https://user-images.githubusercontent.com/84761488/183534762-15f344ea-bc71-48f1-b36b-bffd6f333d9a.png" />
+
+## Funcionalidades 
 
 * Obtém informações do usuário através de qualquer username registrado no <a href="https://github.com">GitHub</a>.
 * Exibe lista de repositórios do usuário, títulos e descrições de projetos públicos.
 * Exibe informações do perfil do usuário: avatar, bio, blog, twitter e localização.
 * Fornece links de direcionamento para projetos e redes sociais.
+* Adaptativo / responsivo.
 
 ## Tecnologias
 
@@ -48,7 +53,7 @@ $ yarn run dev
 
 ## Licença
 
-Este projeto está sob licença do MIT. Para obter mais detalhes, consulte o arquivo [LICENSE](LICENSE.md).
+Este projeto está sob licença do MIT. Para obter mais detalhes, consulte o arquivo <a href="./LICENSE.md">Licença</a>.
 
 
 

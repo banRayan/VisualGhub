@@ -9,7 +9,7 @@ import GlobalStyle from './styles/themes/GlobalStyle';
 const App = () => {
     return (
         <AuthProvider>
-            <Router>
+            <Router basename={process.env.PUBLIC_URL}>
                 <Routes />
                 <GlobalStyle />
             </Router>
@@ -18,3 +18,23 @@ const App = () => {
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
