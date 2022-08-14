@@ -3,28 +3,23 @@
 ## Demo
 
 <p>Você pode acessar o site por meio desse link: </p>
-
-<a href="https://banrayan.github.io/VisualGhub/">-- Visual Ghub --</a>
-
 <div align="center">
- <a href="https://banrayan.github.io/VisualGhub/"  target="_blank"> -- Visual Ghub --</a>
+ <a href="https://banrayan.github.io/VisualGhub/"  target="_blank"> 👉 Visual Ghub 👈</a>
 </div>
 
 ## Sobre 
 
-<p>O projeto consiste em modelo alternativo de exibição dos dados de usuários do GitHub. Para acessá-lo basta ter uma conta no <a href="https://github.com" target="_blank" rel="external">github.com</a> e inserir seu nome de usuário no campo de entrada, assim o site poderá localizar seus dados públicos e consumí-los.</p>
+<p>O projeto consiste em modelo alternativo de exibição dos dados de usuários do GitHub. </br></br>Para acessá-lo basta ter uma conta no <a href="https://github.com" target="_blank" rel="external">github.com</a> e inserir seu nome de usuário no campo de entrada, assim o site poderá localizar seus dados públicos e consumí-los.</p>
 
 <p>Dentre as informações consumidas estão: lista de repositórios, títulos, descrições e links dos projetos etc.</p>
 
-<p>Se você quiser tentar fazer seu própio site consumindo as informações do seu Github, basta acessar a API com seus dados dessa maneira: <strong>https://api.github.com/users/username</strong>.</br> Exemplo: <a href="https://api.github.com/users/banRayan" target="_blank" rel="external">https://api.github.com/users/banRayan</a></p>
-
-<a href="https://dribbble.com/shots/16271760-Sidebar-navigation-for-Dashboard">Layout inspired by design</a> by <a href="https://dribbble.com/tranmautritam">tran mau tritam</a>
-=======
-<a href="https://dribbble.com/shots/16271760-Sidebar-navigation-for-Dashboard/attachments/8139906?mode=m"  target="_blank">Layout</a> by <a href="https://dribbble.com/tranmautritam"  target="_blank">tranmautritam</a>
+<p>Se você quiser tentar fazer seu própio site consumindo as informações do seu Github, basta acessar a API com seus dados dessa maneira: https://api.github.com/users/seu_username.</p>
 
 <img src="https://user-images.githubusercontent.com/84761488/183534498-54926aeb-7baa-4edc-a659-c55aedd785fe.png" />
 <img src="https://user-images.githubusercontent.com/84761488/183537932-0fa2ecfd-ac77-45dd-8377-fcbdf1fda566.png" />
 <img src="https://user-images.githubusercontent.com/84761488/183534762-15f344ea-bc71-48f1-b36b-bffd6f333d9a.png" />
+
+<a href="https://dribbble.com/shots/16271760-Sidebar-navigation-for-Dashboard">Layout inspirado no design</a> de <a href="https://dribbble.com/tranmautritam">tran mau tritam</a>
 
 ## Funcionalidades 
 
@@ -38,18 +33,11 @@
 
 <p>O projeto conta com recursos fornecidos pelo react e libs externas, sendo esses:</p>
 
-<<<<<<< HEAD
-* <a href="https://reactrouter.com" target="_blank" rel="external" >React Router DOM</a> - Roteamento client-side
+* <a href="https://reactrouter.com" target="_blank" rel="external" >React Router</a> - Roteamento client-side
 * <a href="https://styled-components.com" target="_blank" rel="external">Styled Components</a> - CSS in JS
 * Context - Descentralização de dados
 * <a href="https://axios-http.com/ptbr/" target="_blank" rel="external">Axios</a> - HTTP Client
 * <a href="https://react-icons.github.io/react-icons/icons?name=fi" target="_blank" rel="external">React Icons</a> - ícones
-=======
-* <a href="https://reactrouter.com" target="_blank" >React Router DOM</a> - Roteamento client-side
-* <a href="https://styled-components.com"  target="_blank">Styled Components</a> - CSS in JS
-* Context - Descentralização de dados
-* <a href="https://axios-http.com/ptbr/"  target="_blank">Axios</a> - HTTP Client
-* <a href="https://react-icons.github.io/react-i">Icons</a> - React Icons 
 
 ## Requisitos
 
